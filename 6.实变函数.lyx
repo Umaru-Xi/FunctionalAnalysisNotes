@@ -1,0 +1,806 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\use_default_options true
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "STSong"
+\font_sans "default" "STHeiti"
+\font_typewriter "default" "STFangsong"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style plain
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+实变函数
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sigma-$
+\end_inset
+
+代数与可测: 设
+\begin_inset Formula $X=\mathbb{R}^{n}$
+\end_inset
+
+, 集类
+\begin_inset Formula $\Sigma=\{E\subset\mathbb{R}^{n}\}$
+\end_inset
+
+满足下面的三个性质, 则称
+\begin_inset Formula $\Sigma$
+\end_inset
+
+为一个
+\begin_inset Formula $\sigma-$
+\end_inset
+
+代数, 称
+\begin_inset Formula $(\mathbb{R}^{n},\Sigma)$
+\end_inset
+
+为可测空间, 称
+\begin_inset Formula $E\in\Sigma$
+\end_inset
+
+为可测集:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+平庸封闭: 
+\begin_inset Formula $\phi,\mathbb{R}^{n}\subset\Sigma$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+余运算封闭: 若
+\begin_inset Formula $E\in\Sigma$
+\end_inset
+
+, 则
+\begin_inset Formula $E^{c}=\mathbb{R}^{n}\backslash E\in\Sigma$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+可列并封闭: 若
+\begin_inset Formula $E_{i}\in\Sigma,i\in\mathbb{N}$
+\end_inset
+
+, 则
+\begin_inset Formula $\cup{}_{i=1}^{\infty}E_{i}\in\Sigma$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+(或)可列交封闭: 若
+\begin_inset Formula $E_{i}\in\Sigma$
+\end_inset
+
+, 
+\begin_inset Formula $i\in\mathbb{N}$
+\end_inset
+
+, 则
+\begin_inset Formula $\cap_{i=0}^{\infty}E_{i}\in\Sigma$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+不等号定义: 设
+\begin_inset Formula $X=\mathbb{R}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $a=(a_{1},...,a_{n})^{T},b=(b_{1},...,b_{n})^{T}\in\mathbb{R}^{n}$
+\end_inset
+
+, 若
+\begin_inset Formula $a_{i}\le b_{i},1\le i\le n$
+\end_inset
+
+, 则称
+\begin_inset Formula $a\le b$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+半开半闭区间: 
+\begin_inset Formula $(a,b]=\{x\in\mathbb{R}^{n},a_{i}<x\le b_{i},1\le i\le n\}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+测度: 对集类
+\begin_inset Formula $\mathfrak{C}=\{(a,b],a,b\in\mathbb{R}^{n},a<b\}$
+\end_inset
+
+, 定义测度
+\begin_inset Formula $m:\mathfrak{C}\to[0,+\infty]((a,b]\to m(a,b])$
+\end_inset
+
+, 
+\begin_inset Formula $m(a,b]=\prod\limits _{i=1}^{n}(b_{i}-a_{i})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+集类生成的
+\begin_inset Formula $\sigma-$
+\end_inset
+
+代数: 设
+\begin_inset Formula $X=\mathbb{R}^{n}$
+\end_inset
+
+, 集类
+\begin_inset Formula $\mathfrak{C}=\{(a,b]\}$
+\end_inset
+
+, 则
+\begin_inset Formula $\exists!\sigma-$
+\end_inset
+
+代数
+\begin_inset Formula $\sigma(\mathfrak{C})$
+\end_inset
+
+使得
+\begin_inset Formula $\mathfrak{C}\subset\sigma(\mathfrak{C})$
+\end_inset
+
+, 且若还有一个
+\begin_inset Formula $\sigma-$
+\end_inset
+
+代数
+\begin_inset Formula $\Sigma$
+\end_inset
+
+满足
+\begin_inset Formula $\mathfrak{C}\subset\Sigma$
+\end_inset
+
+, 则
+\begin_inset Formula $\sigma(\mathfrak{C})\subset\Sigma$
+\end_inset
+
+.
+ 称
+\begin_inset Formula $\sigma(\mathfrak{C})$
+\end_inset
+
+为由
+\begin_inset Formula $\mathfrak{C}$
+\end_inset
+
+生成的
+\begin_inset Formula $\sigma-$
+\end_inset
+
+代数;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Borel 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+代数: 
+\begin_inset Formula $\sigma(\mathfrak{C})=\beta$
+\end_inset
+
+.
+ 可测空间
+\begin_inset Formula $(\mathbb{R}^{n},\beta)$
+\end_inset
+
+称为Borel可测空间, 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+上的子集
+\begin_inset Formula $B\in\beta$
+\end_inset
+
+作为
+\begin_inset Formula $\beta$
+\end_inset
+
+的元素被称为Borel可测集;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\beta=\sigma(\{(a,b]\})=\sigma(\{(a,b)\})=\sigma(\{[a,b]\})=\sigma(\{\texttt{开集}\})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+子集
+\begin_inset Formula $B$
+\end_inset
+
+的测度: 
+\begin_inset Formula $m(B)=\inf\{\sum\limits _{n=1}^{\infty}m(I_{n}),B\subset\cup_{n=1}^{\infty}\}$
+\end_inset
+
+, 其中
+\begin_inset Formula $I_{n}$
+\end_inset
+
+为半开半闭区间;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Borel测度空间: 装配了测度
+\begin_inset Formula $m$
+\end_inset
+
+的Borel可测空间
+\begin_inset Formula $(\mathbb{R}^{n},\beta,m)$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $m(\phi)=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+可列可加性: 若可列个Borel可测集
+\begin_inset Formula $B_{i}\in\beta,i\in\mathbb{N}$
+\end_inset
+
+, 且它们两两不交
+\begin_inset Formula $B_{i}\cap B_{j}=\phi$
+\end_inset
+
+, 则
+\begin_inset Formula $m(\cup_{i=1}^{\infty}B_{i})=\sum\limits _{i=1}^{\infty}m(B_{i})$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Lebesgue 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+代数: 称
+\begin_inset Formula $\bar{\beta}=\mu=\sigma(\{z\subset B|B\in\beta,m(B)=0\}\cup\beta)$
+\end_inset
+
+即全部零测度集的全体子集为Lebesgue 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+代数, 称
+\begin_inset Formula $E\in\bar{\beta}$
+\end_inset
+
+为Lebesgue可测集;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+测度的性质:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+可数集
+\begin_inset Formula $E=\{x_{i},i\in\mathbb{N}\}\in\mu,m(E)=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{x_{0}\}\in\mu,m(\{x_{0}\})=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+次可加性: 
+\begin_inset Formula $m(\cup_{i=1}^{\infty}E_{i})\le\sum\limits _{i=1}^{\infty}(E_{i})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+下连续性: 若
+\begin_inset Formula $\{E_{i}\}_{i=1}^{\infty}\subset\mu,E_{1}\subset E_{2}\subset...\subset E_{i}\subset...$
+\end_inset
+
+, 则
+\begin_inset Formula $m(\cup_{i=1}^{\infty}E_{i})=m(\lim\limits _{i\to\infty}E_{i})=\lim\limits _{i\to\infty}m(E_{i})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+上连续性: 若
+\begin_inset Formula $\{E_{i}\}_{i=1}^{\infty}\subset\mu,...\subset E_{i}\subset...\subset E_{2}\subset E_{1}$
+\end_inset
+
+, 且
+\begin_inset Formula $m(E_{1})<+\infty$
+\end_inset
+
+, 则
+\begin_inset Formula $m(\cap_{i=1}^{\infty}E_{i})=m(\lim\limits _{i\to\infty}E_{i})=\lim\limits _{i\to\infty}m(E_{i})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $E\subset\mu,x_{0}\in\mathbb{R}^{n},E+x_{0}=\{x+x_{0},x\in E\}$
+\end_inset
+
+, 则
+\begin_inset Formula $m(E)=m(E+x_{0})$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+可测函数: 函数
+\begin_inset Formula $f:(\mathbb{R}^{n},\mu)\to(\mathbb{R},\beta)$
+\end_inset
+
+, 若
+\begin_inset Formula $\forall B\subset\mathbb{R}$
+\end_inset
+
+(Borel可测集)有
+\begin_inset Formula $f^{-1}(B)\subset\mathbb{R}^{n}$
+\end_inset
+
+(Lebesgue可测集), 则称
+\begin_inset Formula $f$
+\end_inset
+
+为可测函数;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+设函数
+\begin_inset Formula $f:E\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $E\in\mu$
+\end_inset
+
+(Lebesgue可测集), 若
+\begin_inset Formula $\forall B\subset\mathbb{R}$
+\end_inset
+
+(Borel可测集), 有
+\begin_inset Formula $f^{-1}(B)\subset\mathbb{R}^{n}$
+\end_inset
+
+是Lebesgue可测集, 则称
+\begin_inset Formula $f$
+\end_inset
+
+是
+\begin_inset Formula $E$
+\end_inset
+
+上的可测函数;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f:E\to\mathbb{R}$
+\end_inset
+
+是可测函数 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\forall t\in\mathbb{R},f^{-1}(t,+\infty)$
+\end_inset
+
+(或
+\begin_inset Formula $f^{-1}[t,+\infty),f^{-1}(-\infty,t),f^{-1}(-\infty,t],f^{-1}(a,b),\forall a,b\in\mathbb{R}$
+\end_inset
+
+)是Lebesgue可测集;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+几乎处处: 
+\begin_inset Formula $a.e.$
+\end_inset
+
+表示几乎处处, 即除去零测集
+\begin_inset Formula $m(\{x\in E:f_{k}(x)\nrightarrow f(x)\})=0$
+\end_inset
+
+外的部分;
+\end_layout
+
+\begin_layout Enumerate
+控制收敛定理: 设
+\begin_inset Formula $\{f_{k}(x)\}_{k=1}^{\infty}:E\subset\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $f_{k}(x)\in L(E),k\in\mathbb{N}$
+\end_inset
+
+即Lebesgue可积, 且
+\begin_inset Formula $\lim\limits _{k\to+\infty}f_{k}(x)\to f(x),a.e.x\in E$
+\end_inset
+
+, 存在
+\begin_inset Formula $F(x)\in L(E)$
+\end_inset
+
+使得
+\begin_inset Formula $|f_{k}(x)|\le F(x),a.e.x\in E,\forall k\in\mathbb{N}$
+\end_inset
+
+, 则
+\begin_inset Formula $\lim\limits _{k\to+\infty}\int_{E}f_{k}(x)dx=\int_{E}\lim\limits _{k\to+\infty}f_{k}(x)dx=\int_{E}f(x)dx$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+函数
+\begin_inset Formula $f,g:E\subset\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+可测, 若
+\begin_inset Formula $f(x)=g(x),a.e.x\in E$
+\end_inset
+
+, 则
+\begin_inset Formula $\int_{E}f(x)dx=\int_{E}g(x)dx$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $E\subset\mathbb{R}^{n}$
+\end_inset
+
+是Lebesgue可测集, 函数
+\begin_inset Formula $f:E\to\mathbb{R}$
+\end_inset
+
+是可测函数, 等价类
+\begin_inset Formula $[f]=\{g:E\to\mathbb{R}\texttt{是可测函数},g(x)=f(x),a.e.x\in E\}$
+\end_inset
+
+, 代表元
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $f\in[f]$
+\end_inset
+
+, 对任意
+\begin_inset Formula $f_{1},f_{2}\in[f]$
+\end_inset
+
+, 有
+\begin_inset Formula $\int_{E}f_{1}(x)dx=\int_{E}f_{2}(x)dx$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $L^{P}$
+\end_inset
+
+空间: 给定
+\begin_inset Formula $1\le P<+\infty$
+\end_inset
+
+, 
+\begin_inset Formula $L^{P}(E):=\{[f]:\quad f:E\nrightarrow\mathbb{R}\texttt{是可测函数},\int_{E}|f(x)|^{P}dx<+\infty\}$
+\end_inset
+
+.
+ 当
+\begin_inset Formula $P=+\infty$
+\end_inset
+
+时, 
+\begin_inset Formula $L^{\infty}(E)=\{[f]:\quad f:E\to\mathbb{R}\texttt{是可测函数},\inf\limits _{z\subset E,m(z)=0}\left(\sup\limits _{E\backslash Z}|f(x)|\right)<+\infty\}$
+\end_inset
+
+.
+ 有时可以用代表元
+\begin_inset Formula $f$
+\end_inset
+
+代替等价类
+\begin_inset Formula $[f]$
+\end_inset
+
+, 而省略
+\begin_inset Formula $[f]$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $L^{P}$
+\end_inset
+
+赋范空间: 当
+\begin_inset Formula $1\le P<+\infty$
+\end_inset
+
+, 
+\begin_inset Formula $X=L^{P}(E)$
+\end_inset
+
+, 
+\begin_inset Formula $||\cdot||_{P}:L^{P}(E)\to\mathbb{R}(f\to||f||_{P})$
+\end_inset
+
+, 
+\begin_inset Formula $||f||_{P}=\left(\int_{E}|f(x)|^{P}dx\right)^{\frac{1}{P}}<+\infty$
+\end_inset
+
+.
+ 当
+\begin_inset Formula $P=+\infty$
+\end_inset
+
+, 
+\begin_inset Formula $||\cdot||:L^{\infty}(E)\to\mathbb{R}(f\to||f||_{\infty})$
+\end_inset
+
+, 
+\begin_inset Formula $||f||_{\infty}=\inf\limits _{m(z)=0,z\subset E}\left(\sup\limits _{E\backslash Z}|f(x)|\right)<+\infty$
+\end_inset
+
+.
+ 则
+\begin_inset Formula $(L^{P},||\cdot||_{P})$
+\end_inset
+
+是赋范空间;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $L^{P}(E),1\le P\le+\infty$
+\end_inset
+
+是完备赋范空间(巴拿赫空间);
+\end_layout
+
+\begin_layout Enumerate
+当
+\begin_inset Formula $1\le P<+\infty$
+\end_inset
+
+时, 
+\begin_inset Formula $L^{P}(E)$
+\end_inset
+
+是可分空间; 当
+\begin_inset Formula $P=+\infty$
+\end_inset
+
+时, 
+\begin_inset Formula $L^{P}(E)$
+\end_inset
+
+是不可分空间;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $L^{P}$
+\end_inset
+
+线性空间: 空间
+\begin_inset Formula $X=L^{P}(E),1\le P\le+\infty$
+\end_inset
+
+, 数域
+\begin_inset Formula $K=\mathbb{R}$
+\end_inset
+
+, 加法
+\begin_inset Formula $+:X\times X\to X((f,g)\to f+g,(f+g)(x)=f(x)+g(x),\forall x\in E)$
+\end_inset
+
+, 数乘
+\begin_inset Formula $\cdot:K\times X\to X((\alpha,f)\to\alpha f,(\alpha f)(x)=\alpha f(x),\forall x\in E)$
+\end_inset
+
+, 则
+\begin_inset Formula $(L^{P}(R),\mathbb{R},+,\cdot)$
+\end_inset
+
+是线性空间;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Holder不等式: 若
+\begin_inset Formula $f\in L^{P}(E),g\in L^{q}(E),\frac{1}{p}+\frac{1}{q}=1$
+\end_inset
+
+, 则
+\begin_inset Formula $\int_{E}|f(x)g(x)|dx\le\left(\int_{E}|f(x)|^{p}dx\right)^{\frac{1}{p}}\left(\int_{E}|g(x)|^{q}dx\right)^{\frac{1}{q}}$
+\end_inset
+
+.
+ 即
+\begin_inset Formula $||fg||_{1}\le||f||_{p}||g||_{q}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+当
+\begin_inset Formula $p=q=2$
+\end_inset
+
+时, Holder不等式退化为柯西-许瓦兹不等式;
+\end_layout
+
+\begin_layout Enumerate
+当
+\begin_inset Formula $m(E)<+\infty,1\le P_{1}<P_{2}<+\infty$
+\end_inset
+
+, 有
+\begin_inset Formula $L^{P_{2}}(E)\subset L^{P_{1}}(E)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+勒让德多项式: 在
+\begin_inset Formula $L^{2}$
+\end_inset
+
+上的基
+\begin_inset Formula $\{1,t,t^{2},...,t^{n},...\}$
+\end_inset
+
+经过施密特正交化后得到的正交规范基;
+\end_layout
+
+\end_body
+\end_document

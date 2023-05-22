@@ -1,0 +1,709 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\use_default_options true
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "STSong"
+\font_sans "default" "STHeiti"
+\font_typewriter "default" "STFangsong"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style plain
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+映射(作业: 20230227)与巴拿赫不动点定理(作业: 20230309)
+\end_layout
+
+\begin_layout Enumerate
+连续: 有度量空间
+\begin_inset Formula $(X,d_{X})$
+\end_inset
+
+和
+\begin_inset Formula $(Y,d_{Y})$
+\end_inset
+
+, 映射
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+, 
+\begin_inset Formula $x_{0}\in X$
+\end_inset
+
+, 若
+\begin_inset Formula $\forall\varepsilon>0,\exists\delta>0:\forall x,d_{X}(x_{0},x)<\delta$
+\end_inset
+
+,有
+\begin_inset Formula $d_{Y}(T(x),T(x_{0}))<\varepsilon$
+\end_inset
+
+, 则称
+\begin_inset Formula $T$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处连续.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+可简记为: 
+\begin_inset Formula $\forall\varepsilon>0,\exists\delta>0:T(B(x_{0},\delta))<B(T(x_{0}),\varepsilon)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+映射连续: 映射若映射
+\begin_inset Formula $T$
+\end_inset
+
+在
+\begin_inset Formula $X$
+\end_inset
+
+中每一点连续, 则称
+\begin_inset Formula $T$
+\end_inset
+
+为连续映射;
+\end_layout
+
+\begin_layout Enumerate
+连续性等价描述(与空间结构相融): 
+\begin_inset Formula $U$
+\end_inset
+
+是开集, 
+\begin_inset Formula $T:(X,d)\to(Y,d)$
+\end_inset
+
+连续
+\begin_inset Formula $\Leftrightarrow\forall U\subset Y:T^{-1}U=\{x\in X|T(x)\subset U\}$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的开集;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若开集
+\begin_inset Formula $V,\forall V\subset C:TV=\{y\in Y|\exists x\in V,Tx=y\}$
+\end_inset
+
+, 其像
+\begin_inset Formula $TV$
+\end_inset
+
+不一定是
+\begin_inset Formula $Y$
+\end_inset
+
+中的开集;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+极限(在点处的收敛性): 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+, 序列
+\begin_inset Formula $\{x_{n}\}_{n=1}^{\infty}\subset X$
+\end_inset
+
+, 
+\begin_inset Formula $\exists x\in X:\lim\limits _{i\to\infty}d(x_{0},x)=0$
+\end_inset
+
+, 则称
+\begin_inset Formula $x$
+\end_inset
+
+是序列
+\begin_inset Formula ${x_{n}}$
+\end_inset
+
+的极限.
+ 记
+\begin_inset Formula $x_{n}\to x$
+\end_inset
+
+或
+\begin_inset Formula $\lim\limits _{n\to+\infty}x_{n}=x$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+直径: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+, 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+, 直径
+\begin_inset Formula $d(M)=\sup\limits _{x\in M,y\in M}d(d,y)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+有界集: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+, 
+\begin_inset Formula $d(M)<\infty$
+\end_inset
+
+, 则称
+\begin_inset Formula $M$
+\end_inset
+
+是有界集.
+ 
+\begin_inset Formula $M$
+\end_inset
+
+是有界集
+\begin_inset Formula $\Leftrightarrow\forall x_{0}\in X,\exists r=r(x_{0})>0:M\subset B(x_{0},r)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+极限的唯一性: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中的收敛序列是有界集, 且极限唯一;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若
+\begin_inset Formula $x_{n}\to x,y_{n}\to y$
+\end_inset
+
+, 则
+\begin_inset Formula $d(x_{n},y_{n})\to d(x,y)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+柯西列: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中, 序列
+\begin_inset Formula $\{x_{n}\}_{n=1}^{\infty}\subset X,\forall\varepsilon>0,\exists N=N(\varepsilon)>0:n,m\text{>}N,d(x_{n},y_{n})<\varepsilon$
+\end_inset
+
+, 则称
+\begin_inset Formula $\{x_{n}\}$
+\end_inset
+
+为柯西列;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+在度量空间中, 收敛序列一定是柯西列(柯西列未必收敛);
+\end_layout
+
+\begin_layout Enumerate
+完备空间: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中, 如果
+\begin_inset Formula $X$
+\end_inset
+
+中任何柯西列都是收敛列, 则称
+\begin_inset Formula $X$
+\end_inset
+
+完备;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+常见完备空间: 
+\begin_inset Formula $(\mathbb{R}^{n},d_{p}),(l^{p},d_{p})$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+闭集: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中, 
+\begin_inset Formula $M\subset X,M$
+\end_inset
+
+是闭集
+\begin_inset Formula $\Leftrightarrow\forall\{x_{n}\}\subset M:x_{n}\to x\in X,x\in M$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+闭包: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中, 
+\begin_inset Formula $M\subset X,x\in X,x\in\bar{M}=M\cup M'\Leftrightarrow\exists\{x_{n}\}\subset M:x_{n}\to x$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+子空间: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中, 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+.
+ 则度量空间
+\begin_inset Formula $(M,d)$
+\end_inset
+
+被称为子空间;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+子空间完备性: 在完备的度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中, 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+, 则: 当且仅当
+\begin_inset Formula $M$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的闭集时, 
+\begin_inset Formula $M$
+\end_inset
+
+完备;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+连续函数: 度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+和
+\begin_inset Formula $(Y,d)$
+\end_inset
+
+有
+\begin_inset Formula $T:(X,d)\to(Y,d)$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+连续, 当且仅当若
+\begin_inset Formula $x_{n}\to x$
+\end_inset
+
+在
+\begin_inset Formula $(X,d)$
+\end_inset
+
+, 则
+\begin_inset Formula $Tx_{n}\to Tx_{0}$
+\end_inset
+
+在
+\begin_inset Formula $(Y,d)$
+\end_inset
+
+中;
+\end_layout
+
+\begin_layout Enumerate
+等距映射: 度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+和
+\begin_inset Formula $(\tilde{X},\tilde{d})$
+\end_inset
+
+有
+\begin_inset Formula $T:(X,d)\to(\tilde{X},\tilde{d})$
+\end_inset
+
+, 若
+\begin_inset Formula $\forall x.y\in X,\exists\tilde{d}(Tx,Ty)=d(x,y)$
+\end_inset
+
+, 则称
+\begin_inset Formula $T$
+\end_inset
+
+是等距映射;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+等距空间: 若有双射(单射且满射)
+\begin_inset Formula $T:(X,d)\to(\tilde{X},\tilde{d})$
+\end_inset
+
+, 且
+\begin_inset Formula $T$
+\end_inset
+
+为等距映射, 则称度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+和
+\begin_inset Formula $(\tilde{X},\tilde{d})$
+\end_inset
+
+是等距空间;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+完备化空间: 度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+一定存在一个完备的度量空间
+\begin_inset Formula $(\hat{X},\hat{d})$
+\end_inset
+
+, 且
+\begin_inset Formula $W\subset\hat{X}$
+\end_inset
+
+满足
+\begin_inset Formula $W$
+\end_inset
+
+在
+\begin_inset Formula $\hat{X}$
+\end_inset
+
+中稠密(
+\begin_inset Formula $\bar{M}=\hat{X}$
+\end_inset
+
+)且
+\begin_inset Formula $W$
+\end_inset
+
+与
+\begin_inset Formula $X$
+\end_inset
+
+是等距空间, 则称
+\begin_inset Formula $\hat{X}$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+的完备化空间;
+\end_layout
+
+\begin_layout Enumerate
+不动点: 集合
+\begin_inset Formula $X$
+\end_inset
+
+,映射
+\begin_inset Formula $T:X\to X$
+\end_inset
+
+, 若
+\begin_inset Formula $\exists x\in X:T(x)=x$
+\end_inset
+
+, 则称
+\begin_inset Formula $x_{0}$
+\end_inset
+
+是映射
+\begin_inset Formula $T$
+\end_inset
+
+的一个不动点;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+压缩映射: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中, 有映射
+\begin_inset Formula $T:X\to X$
+\end_inset
+
+, 若
+\begin_inset Formula $\exists0<a<1:\forall x,y\in X,d(Tx,Ty)\le ad(x,y)$
+\end_inset
+
+, 则称
+\begin_inset Formula $T$
+\end_inset
+
+为压缩映射; 
+\end_layout
+
+\begin_layout Enumerate
+巴拿赫不动点定理: 在完备度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中, 有压缩映射
+\begin_inset Formula $T:X\to X$
+\end_inset
+
+, 则存在唯一不动点
+\begin_inset Formula $x$
+\end_inset
+
+, 且
+\begin_inset Formula $\forall x_{0}\in X,x_{n}=Tx_{n-1},n\in N^{*}$
+\end_inset
+
+, 则
+\begin_inset Formula $x_{n}|_{n\to\infty}=x$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+李氏条件: 
+\begin_inset Formula $\forall(t,x),(t,y)\in R,\exists k>0,s.t.:|f(t,x)-f(t,y)|\le k|x-y|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+常微分方程局部解的存在唯一性定理: 设
+\begin_inset Formula $R=\{(t,x)||t-t_{0}|\le a,|x-x_{0}|\le b\}$
+\end_inset
+
+, 
+\begin_inset Formula $f$
+\end_inset
+
+在
+\begin_inset Formula $R$
+\end_inset
+
+上连续, 
+\begin_inset Formula $\forall(t,x)\in R,|f(t,x)|\le c$
+\end_inset
+
+, 
+\begin_inset Formula $f$
+\end_inset
+
+对
+\begin_inset Formula $x$
+\end_inset
+
+满足李氏条件, 则常微分方程
+\begin_inset Formula $\begin{cases}
+x'(t)=f(t,x(t))\\
+x(t_{0})=x_{0}
+\end{cases}$
+\end_inset
+
+在区间
+\begin_inset Formula $[t_{0}-\beta,t_{0}+\beta]$
+\end_inset
+
+上存在唯一的解
+\begin_inset Formula $x(t)$
+\end_inset
+
+, 
+\begin_inset Formula $\beta<\min\{a,\frac{b}{c},\frac{1}{k}\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+作业: 20230227
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+证明映射
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+当且仅当任一闭集
+\begin_inset Formula $M\subset Y$
+\end_inset
+
+的逆象是
+\begin_inset Formula $X$
+\end_inset
+
+中的闭集时才是连续的;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+作业: 20230309
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若度量空间
+\begin_inset Formula $X$
+\end_inset
+
+中的序列
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+是收敛的且有极限
+\begin_inset Formula $x$
+\end_inset
+
+, 证明
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+的每一个子序列
+\begin_inset Formula $(x_{n_{k}})$
+\end_inset
+
+都是收敛的, 并且有同一个极限
+\begin_inset Formula $x$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

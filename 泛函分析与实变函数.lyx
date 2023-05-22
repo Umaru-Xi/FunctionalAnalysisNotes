@@ -1,0 +1,5581 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass ctex-article
+\use_default_options true
+\maintain_unincluded_children false
+\language chinese-simplified
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman "default" "STSong"
+\font_sans "default" "STHeiti"
+\font_typewriter "default" "STFangsong"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style plain
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+绪论
+\end_layout
+
+\begin_layout Enumerate
+教材: 泛函分析导论及应用(前五章), 欧文克雷斯齐格; 
+\end_layout
+
+\begin_layout Enumerate
+参考书: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+泛函分析讲义, 张恭庆; 
+\end_layout
+
+\begin_layout Enumerate
+时变函数论, 周民强; 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+作业: 每月一次, 形式不限; 
+\end_layout
+
+\begin_layout Section
+度量空间与集合(作业: 20230220)
+\end_layout
+
+\begin_layout Enumerate
+度量空间: 设
+\begin_inset Formula $X$
+\end_inset
+
+是集合, 有映射
+\begin_inset Formula $d:(x,y)\to d(x,y)$
+\end_inset
+
+.
+\begin_inset Formula $d$
+\end_inset
+
+满足:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\forall x,y\in X,d(x,y)\ge0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall x,y\in X$
+\end_inset
+
+,
+\begin_inset Formula $d(x,y)=d(y,x)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall x,y,z\in X,d(x,z)\le d(x,y)+d(y,z)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+则称
+\begin_inset Formula $d$
+\end_inset
+
+为一个度量(距离), 
+\begin_inset Formula $(X,d)$
+\end_inset
+
+为度量空间;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+常见度量:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $p-$
+\end_inset
+
+度量: 
+\begin_inset Formula $d_{p}(x,y)=\left(\sum\limits _{x=1}^{n}|x_{i}-y_{i}|^{p}\right)^{\frac{1}{p}}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\infty-$
+\end_inset
+
+度量: 
+\begin_inset Formula $d_{\infty}(x,y)=\max|x_{i}-y_{i}|$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+球: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中, 称
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+开球: 
+\begin_inset Formula $B(x_{0},r)=\{x\in X|d(x,x_{0})<r\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+闭球: 
+\begin_inset Formula $\overline{B(x_{0},r)}=\{x\in X|d(x,x_{0})\le r\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+球面: 
+\begin_inset Formula $S(x_{0},r)=\{x\in X|d(x,x_{0})=r\}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\varepsilon-$
+\end_inset
+
+邻域: 开球
+\begin_inset Formula $B(x_{0},\varepsilon)$
+\end_inset
+
+称为
+\begin_inset Formula $x_{0}$
+\end_inset
+
+的一个
+\begin_inset Formula $\varepsilon-$
+\end_inset
+
+邻域;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+开集: 度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+, 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+, 若对任意元素
+\begin_inset Formula $x_{0}\in M$
+\end_inset
+
+, 存在
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+, 使得
+\begin_inset Formula $B(x_{0},\varepsilon)\subset M$
+\end_inset
+
+, 则称
+\begin_inset Formula $M$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的开集;
+\end_layout
+
+\begin_layout Enumerate
+闭集: 度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+, 
+\begin_inset Formula $K\subset X$
+\end_inset
+
+, 若
+\begin_inset Formula $K^{c}=X|K$
+\end_inset
+
+是开集, 则称
+\begin_inset Formula $K$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的闭集;
+\end_layout
+
+\begin_layout Enumerate
+内点: 度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+, 
+\begin_inset Formula $M\subset X,x_{0}\in M$
+\end_inset
+
+, 若存在
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+, 使得
+\begin_inset Formula $B(x_{0},\varepsilon)\subset M$
+\end_inset
+
+, 则称
+\begin_inset Formula $x_{o}$
+\end_inset
+
+是
+\begin_inset Formula $M$
+\end_inset
+
+的一个内点;
+\end_layout
+
+\begin_layout Enumerate
+内部: 
+\begin_inset Formula $M$
+\end_inset
+
+中全体内点构成的集合称为
+\begin_inset Formula $M$
+\end_inset
+
+的内部, 记为: 
+\begin_inset Formula $M^{o}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+集类: 
+\begin_inset Formula $\Xi$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中某些子集构成的集合, 称
+\begin_inset Formula $\Xi$
+\end_inset
+
+为集类;
+\end_layout
+
+\begin_layout Enumerate
+拓扑空间: 满足开集条件的集类组成的空间
+\begin_inset Formula $(X,\Xi)$
+\end_inset
+
+, 定义见另一笔记文件;
+\end_layout
+
+\begin_layout Enumerate
+聚点(极限点): 度量空间
+\begin_inset Formula $(X,d),M\subset X,x_{0}\in X$
+\end_inset
+
+, 若, 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+的任一
+\begin_inset Formula $\varepsilon-$
+\end_inset
+
+邻域都至少函有一个不同于
+\begin_inset Formula $x_{0}$
+\end_inset
+
+的点
+\begin_inset Formula $y_{o}\in M$
+\end_inset
+
+, 则称
+\begin_inset Formula $x_{0}$
+\end_inset
+
+是
+\begin_inset Formula $M$
+\end_inset
+
+的聚点;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+导集: 
+\begin_inset Formula $M$
+\end_inset
+
+的聚点全体构成的集合称为
+\begin_inset Formula $M$
+\end_inset
+
+的导集, 记为
+\begin_inset Formula $M'$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+闭包: 
+\begin_inset Formula $\bar{M}:=M\cup M'$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+, 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+, 则
+\begin_inset Formula $\overline{M}$
+\end_inset
+
+是闭集;
+\end_layout
+
+\begin_layout Enumerate
+度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+, 
+\begin_inset Formula $M\subset X:M$
+\end_inset
+
+是闭集
+\begin_inset Formula $\Leftrightarrow M=\bar{M}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+边缘: 
+\begin_inset Formula $\partial M=\bar{M}-M^{o}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+有限集: 如果集合中元素个数有限, 则称其为有限集;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+可列集: 若集合中元素的个数无限多, 但可与自然数集
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+中的元素一一对应, 则集合为可列集;
+\end_layout
+
+\begin_layout Enumerate
+可数集: 有限集和可列集统称为可数集;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A_{n}(n\in\mathbb{N})$
+\end_inset
+
+为可列集, 则
+\begin_inset Formula $A=\cup_{n=1}^{\infty}A_{n}$
+\end_inset
+
+为可列集;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+推论: 可列个可列集的并集为可列集.
+ 如: 有理数集
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+是可列集;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+常见的不可列集: 无理数集, 实数集
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+稠密子集: 度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+, 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+, 若
+\begin_inset Formula $\overline{M}=X$
+\end_inset
+
+, 则称
+\begin_inset Formula $M$
+\end_inset
+
+在
+\begin_inset Formula $X$
+\end_inset
+
+中稠密, 
+\begin_inset Formula $M$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的稠密子集;
+\end_layout
+
+\begin_layout Enumerate
+可分性: 若
+\begin_inset Formula $X$
+\end_inset
+
+有一个可数的稠密子集
+\begin_inset Formula $M$
+\end_inset
+
+, 则称
+\begin_inset Formula $X$
+\end_inset
+
+是可分的, 
+\begin_inset Formula $(X,d)$
+\end_inset
+
+是一个可分空间;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+常见可分空间: 
+\begin_inset Formula $(\mathbb{R}^{n},d_{p})(1\le p\le\infty)$
+\end_inset
+
+, 
+\begin_inset Formula $(l^{p},d_{p})(1\le p\le\infty)$
+\end_inset
+
+, 其中
+\begin_inset Formula $l^{p}=\{\{x_{i}\},i\in\mathbb{N},\sum\limits _{i=1}^{\infty}|x_{i}|^{p}<\infty\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+函数空间可分: 
+\begin_inset Formula $(\mathbb{C}[a,b],d_{max})$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $d_{max}(f,g)=\max_{a\le t\le b}|f(t)-g(t)|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C[a,b]=\{f:[a,b]\to R|\exists f'(t)\}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+常见不可分空间: 
+\begin_inset Formula $(l^{\infty},d_{\text{\ensuremath{\infty}}})$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $l^{\infty}=\{(x_{i})|i\in\mathbb{N},\sup_{i\in\mathbb{N}}|x_{i}|<\infty\}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+作业: 20230220
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+设
+\begin_inset Formula $(X,d)$
+\end_inset
+
+是任一度量空间, 证明由
+\begin_inset Formula $\tilde{d}(x,y)=\frac{d(x,y)}{1+d(x,y)}$
+\end_inset
+
+在
+\begin_inset Formula $X$
+\end_inset
+
+上定义了另一个度量, 且在
+\begin_inset Formula $\tilde{d}$
+\end_inset
+
+度量下, 
+\begin_inset Formula $X$
+\end_inset
+
+是有界的;
+\end_layout
+
+\end_deeper
+\begin_layout Section
+映射(作业: 20230227)与巴拿赫不动点定理(作业: 20230309)
+\end_layout
+
+\begin_layout Enumerate
+连续: 有度量空间
+\begin_inset Formula $(X,d_{X})$
+\end_inset
+
+和
+\begin_inset Formula $(Y,d_{Y})$
+\end_inset
+
+, 映射
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+, 
+\begin_inset Formula $x_{0}\in X$
+\end_inset
+
+, 若
+\begin_inset Formula $\forall\varepsilon>0,\exists\delta>0:\forall x,d_{X}(x_{0},x)<\delta$
+\end_inset
+
+,有
+\begin_inset Formula $d_{Y}(T(x),T(x_{0}))<\varepsilon$
+\end_inset
+
+, 则称
+\begin_inset Formula $T$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+处连续.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+可简记为: 
+\begin_inset Formula $\forall\varepsilon>0,\exists\delta>0:T(B(x_{0},\delta))<B(T(x_{0}),\varepsilon)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+映射连续: 映射若映射
+\begin_inset Formula $T$
+\end_inset
+
+在
+\begin_inset Formula $X$
+\end_inset
+
+中每一点连续, 则称
+\begin_inset Formula $T$
+\end_inset
+
+为连续映射;
+\end_layout
+
+\begin_layout Enumerate
+连续性等价描述(与空间结构相融): 
+\begin_inset Formula $U$
+\end_inset
+
+是开集, 
+\begin_inset Formula $T:(X,d)\to(Y,d)$
+\end_inset
+
+连续
+\begin_inset Formula $\Leftrightarrow\forall U\subset Y:T^{-1}U=\{x\in X|T(x)\subset U\}$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的开集;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若开集
+\begin_inset Formula $V,\forall V\subset C:TV=\{y\in Y|\exists x\in V,Tx=y\}$
+\end_inset
+
+, 其像
+\begin_inset Formula $TV$
+\end_inset
+
+不一定是
+\begin_inset Formula $Y$
+\end_inset
+
+中的开集;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+极限(在点处的收敛性): 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+, 序列
+\begin_inset Formula $\{x_{n}\}_{n=1}^{\infty}\subset X$
+\end_inset
+
+, 
+\begin_inset Formula $\exists x\in X:\lim\limits _{i\to\infty}d(x_{0},x)=0$
+\end_inset
+
+, 则称
+\begin_inset Formula $x$
+\end_inset
+
+是序列
+\begin_inset Formula ${x_{n}}$
+\end_inset
+
+的极限.
+ 记
+\begin_inset Formula $x_{n}\to x$
+\end_inset
+
+或
+\begin_inset Formula $\lim\limits _{n\to+\infty}x_{n}=x$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+直径: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+, 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+, 直径
+\begin_inset Formula $d(M)=\sup\limits _{x\in M,y\in M}d(d,y)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+有界集: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+, 
+\begin_inset Formula $d(M)<\infty$
+\end_inset
+
+, 则称
+\begin_inset Formula $M$
+\end_inset
+
+是有界集.
+ 
+\begin_inset Formula $M$
+\end_inset
+
+是有界集
+\begin_inset Formula $\Leftrightarrow\forall x_{0}\in X,\exists r=r(x_{0})>0:M\subset B(x_{0},r)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+极限的唯一性: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中的收敛序列是有界集, 且极限唯一;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若
+\begin_inset Formula $x_{n}\to x,y_{n}\to y$
+\end_inset
+
+, 则
+\begin_inset Formula $d(x_{n},y_{n})\to d(x,y)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+柯西列: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中, 序列
+\begin_inset Formula $\{x_{n}\}_{n=1}^{\infty}\subset X,\forall\varepsilon>0,\exists N=N(\varepsilon)>0:n,m\text{>}N,d(x_{n},y_{n})<\varepsilon$
+\end_inset
+
+, 则称
+\begin_inset Formula $\{x_{n}\}$
+\end_inset
+
+为柯西列;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+在度量空间中, 收敛序列一定是柯西列(柯西列未必收敛);
+\end_layout
+
+\begin_layout Enumerate
+完备空间: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中, 如果
+\begin_inset Formula $X$
+\end_inset
+
+中任何柯西列都是收敛列, 则称
+\begin_inset Formula $X$
+\end_inset
+
+完备;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+常见完备空间: 
+\begin_inset Formula $(\mathbb{R}^{n},d_{p}),(l^{p},d_{p})$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+闭集: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中, 
+\begin_inset Formula $M\subset X,M$
+\end_inset
+
+是闭集
+\begin_inset Formula $\Leftrightarrow\forall\{x_{n}\}\subset M:x_{n}\to x\in X,x\in M$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+闭包: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中, 
+\begin_inset Formula $M\subset X,x\in X,x\in\bar{M}=M\cup M'\Leftrightarrow\exists\{x_{n}\}\subset M:x_{n}\to x$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+子空间: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中, 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+.
+ 则度量空间
+\begin_inset Formula $(M,d)$
+\end_inset
+
+被称为子空间;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+子空间完备性: 在完备的度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中, 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+, 则: 当且仅当
+\begin_inset Formula $M$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的闭集时, 
+\begin_inset Formula $M$
+\end_inset
+
+完备;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+连续函数: 度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+和
+\begin_inset Formula $(Y,d)$
+\end_inset
+
+有
+\begin_inset Formula $T:(X,d)\to(Y,d)$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+连续, 当且仅当若
+\begin_inset Formula $x_{n}\to x$
+\end_inset
+
+在
+\begin_inset Formula $(X,d)$
+\end_inset
+
+, 则
+\begin_inset Formula $Tx_{n}\to Tx_{0}$
+\end_inset
+
+在
+\begin_inset Formula $(Y,d)$
+\end_inset
+
+中;
+\end_layout
+
+\begin_layout Enumerate
+等距映射: 度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+和
+\begin_inset Formula $(\tilde{X},\tilde{d})$
+\end_inset
+
+有
+\begin_inset Formula $T:(X,d)\to(\tilde{X},\tilde{d})$
+\end_inset
+
+, 若
+\begin_inset Formula $\forall x.y\in X,\exists\tilde{d}(Tx,Ty)=d(x,y)$
+\end_inset
+
+, 则称
+\begin_inset Formula $T$
+\end_inset
+
+是等距映射;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+等距空间: 若有双射(单射且满射)
+\begin_inset Formula $T:(X,d)\to(\tilde{X},\tilde{d})$
+\end_inset
+
+, 且
+\begin_inset Formula $T$
+\end_inset
+
+为等距映射, 则称度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+和
+\begin_inset Formula $(\tilde{X},\tilde{d})$
+\end_inset
+
+是等距空间;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+完备化空间: 度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+一定存在一个完备的度量空间
+\begin_inset Formula $(\hat{X},\hat{d})$
+\end_inset
+
+, 且
+\begin_inset Formula $W\subset\hat{X}$
+\end_inset
+
+满足
+\begin_inset Formula $W$
+\end_inset
+
+在
+\begin_inset Formula $\hat{X}$
+\end_inset
+
+中稠密(
+\begin_inset Formula $\bar{M}=\hat{X}$
+\end_inset
+
+)且
+\begin_inset Formula $W$
+\end_inset
+
+与
+\begin_inset Formula $X$
+\end_inset
+
+是等距空间, 则称
+\begin_inset Formula $\hat{X}$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+的完备化空间;
+\end_layout
+
+\begin_layout Enumerate
+不动点: 集合
+\begin_inset Formula $X$
+\end_inset
+
+,映射
+\begin_inset Formula $T:X\to X$
+\end_inset
+
+, 若
+\begin_inset Formula $\exists x\in X:T(x)=x$
+\end_inset
+
+, 则称
+\begin_inset Formula $x_{0}$
+\end_inset
+
+是映射
+\begin_inset Formula $T$
+\end_inset
+
+的一个不动点;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+压缩映射: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中, 有映射
+\begin_inset Formula $T:X\to X$
+\end_inset
+
+, 若
+\begin_inset Formula $\exists0<a<1:\forall x,y\in X,d(Tx,Ty)\le ad(x,y)$
+\end_inset
+
+, 则称
+\begin_inset Formula $T$
+\end_inset
+
+为压缩映射; 
+\end_layout
+
+\begin_layout Enumerate
+巴拿赫不动点定理: 在完备度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中, 有压缩映射
+\begin_inset Formula $T:X\to X$
+\end_inset
+
+, 则存在唯一不动点
+\begin_inset Formula $x$
+\end_inset
+
+, 且
+\begin_inset Formula $\forall x_{0}\in X,x_{n}=Tx_{n-1},n\in N^{*}$
+\end_inset
+
+, 则
+\begin_inset Formula $x_{n}|_{n\to\infty}=x$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+李氏条件: 
+\begin_inset Formula $\forall(t,x),(t,y)\in R,\exists k>0,s.t.:|f(t,x)-f(t,y)|\le k|x-y|$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+常微分方程局部解的存在唯一性定理: 设
+\begin_inset Formula $R=\{(t,x)||t-t_{0}|\le a,|x-x_{0}|\le b\}$
+\end_inset
+
+, 
+\begin_inset Formula $f$
+\end_inset
+
+在
+\begin_inset Formula $R$
+\end_inset
+
+上连续, 
+\begin_inset Formula $\forall(t,x)\in R,|f(t,x)|\le c$
+\end_inset
+
+, 
+\begin_inset Formula $f$
+\end_inset
+
+对
+\begin_inset Formula $x$
+\end_inset
+
+满足李氏条件, 则常微分方程
+\begin_inset Formula $\begin{cases}
+x'(t)=f(t,x(t))\\
+x(t_{0})=x_{0}
+\end{cases}$
+\end_inset
+
+在区间
+\begin_inset Formula $[t_{0}-\beta,t_{0}+\beta]$
+\end_inset
+
+上存在唯一的解
+\begin_inset Formula $x(t)$
+\end_inset
+
+, 
+\begin_inset Formula $\beta<\min\{a,\frac{b}{c},\frac{1}{k}\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+作业: 20230227
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+证明映射
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+当且仅当任一闭集
+\begin_inset Formula $M\subset Y$
+\end_inset
+
+的逆象是
+\begin_inset Formula $X$
+\end_inset
+
+中的闭集时才是连续的;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+作业: 20230309
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若度量空间
+\begin_inset Formula $X$
+\end_inset
+
+中的序列
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+是收敛的且有极限
+\begin_inset Formula $x$
+\end_inset
+
+, 证明
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+的每一个子序列
+\begin_inset Formula $(x_{n_{k}})$
+\end_inset
+
+都是收敛的, 并且有同一个极限
+\begin_inset Formula $x$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Section
+赋范空间(作业: 20230317)与线性算子(作业20230425)
+\end_layout
+
+\begin_layout Enumerate
+加法: 集合
+\begin_inset Formula $X$
+\end_inset
+
+, 数域
+\begin_inset Formula $k$
+\end_inset
+
+, 加法
+\begin_inset Formula $+:X\times X\to X$
+\end_inset
+
+, 满足:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+交换律: 
+\begin_inset Formula $x+y=y+x$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+结合律: 
+\begin_inset Formula $(x+y)+z=x+(y+z)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+零元: 
+\begin_inset Formula $\exists\theta\in X,s.t.:\forall x\in X,x+\theta=x$
+\end_inset
+
+, 则称
+\begin_inset Formula $\theta$
+\end_inset
+
+为零元;
+\end_layout
+
+\begin_layout Enumerate
+逆元: 
+\begin_inset Formula $\forall x\in X,\exists x'\in X,s.t.:x+x'=\theta$
+\end_inset
+
+, 则称
+\begin_inset Formula $x'$
+\end_inset
+
+为
+\begin_inset Formula $x$
+\end_inset
+
+的逆元, 记作
+\begin_inset Formula $-x$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+数乘: 集合
+\begin_inset Formula $X$
+\end_inset
+
+, 数域
+\begin_inset Formula $K$
+\end_inset
+
+, 数乘
+\begin_inset Formula $\cdot:$
+\end_inset
+
+
+\begin_inset Formula $k\times X\to X,k\in K$
+\end_inset
+
+, 满足:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\alpha(\beta x)=(\alpha\text{\ensuremath{\beta}})x$
+\end_inset
+
+, 
+\begin_inset Formula $\forall\alpha,\beta\in K,\forall x,y\in X$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $1x=x$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\alpha(x+y)=\alpha x+\alpha y$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(\alpha+\beta)x=\alpha x+\beta x$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+线性空间: 定义了加法和数乘的空间
+\begin_inset Formula $(X,K,+,\cdot)$
+\end_inset
+
+, 
+\begin_inset Formula $x\in X$
+\end_inset
+
+称为向量(矢量), 
+\begin_inset Formula $k\in K$
+\end_inset
+
+称为标量.
+ 线性空间以后默认装配数域, 加法, 数乘;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+线性空间的零元唯一;
+\end_layout
+
+\begin_layout Enumerate
+线性空间的逆元唯一;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall x\in X,0x=\theta$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-1\cdot x=-x$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\alpha\theta=\theta$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+常见线性空间:
+\begin_inset Formula $(C[a,b],\mathbb{R},+,\cdot)$
+\end_inset
+
+, 
+\begin_inset Formula $(l^{p},\mathbb{R},+,\cdot)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+线性组合: 设
+\begin_inset Formula $X$
+\end_inset
+
+是线性空间, 
+\begin_inset Formula $x_{1},x_{2},...x_{n}\in X$
+\end_inset
+
+, 称
+\begin_inset Formula $a_{1}x_{1}+...+a_{n}x_{n},a_{n}\in K$
+\end_inset
+
+为
+\begin_inset Formula $x_{1},x_{2},...x_{n}$
+\end_inset
+
+的线性组合;
+\end_layout
+
+\begin_layout Enumerate
+子空间: 设
+\begin_inset Formula $X$
+\end_inset
+
+是线性空间, 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+, 称
+\begin_inset Formula $M$
+\end_inset
+
+中向量的所有线性组合构成的集合为
+\begin_inset Formula $M$
+\end_inset
+
+所张成的子空间, 记为
+\begin_inset Formula $\textrm{span}M$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\texttt{span}M$
+\end_inset
+
+对加法和数乘封闭;
+\end_layout
+
+\begin_layout Enumerate
+线性空间的子空间: 设
+\begin_inset Formula $X$
+\end_inset
+
+是线性空间, 子集
+\begin_inset Formula $Y\subset X$
+\end_inset
+
+, 若
+\begin_inset Formula $\forall y_{1},y_{2}\in Y$
+\end_inset
+
+, 
+\begin_inset Formula $\forall a_{1},a_{2}\in K$
+\end_inset
+
+, 都有
+\begin_inset Formula $a_{1}y_{1}+a_{2}y_{2}\in Y$
+\end_inset
+
+, 则
+\begin_inset Formula $Y$
+\end_inset
+
+本身也是线性空间, 称
+\begin_inset Formula $Y$
+\end_inset
+
+为
+\begin_inset Formula $X$
+\end_inset
+
+的一个子空间;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+线性无关: 设
+\begin_inset Formula $X$
+\end_inset
+
+是线性空间, {
+\begin_inset Formula $x_{1},...,x_{n}$
+\end_inset
+
+}
+\begin_inset Formula $\subset X$
+\end_inset
+
+, 若
+\begin_inset Formula $a_{1}x_{1}+...+a_{n}x_{n}=\theta$
+\end_inset
+
+, 则一定有
+\begin_inset Formula $a_{1}=...=a_{n}=0$
+\end_inset
+
+, 称{
+\begin_inset Formula $x_{1},...,x_{n}$
+\end_inset
+
+}线性无关;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+线性相关: 若存在不全为零的标量
+\begin_inset Formula $a_{1},...,a_{n}$
+\end_inset
+
+, 使得
+\begin_inset Formula $a_{1}x_{1}+...+a_{n}x_{n}=\theta$
+\end_inset
+
+, 则称{
+\begin_inset Formula $x_{1},...,x_{n}$
+\end_inset
+
+}线性相关;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+维数: 设
+\begin_inset Formula $X$
+\end_inset
+
+是线性空间, 若
+\begin_inset Formula $\exists n>0,n\in\mathbb{Z}^{*}$
+\end_inset
+
+, 使得
+\begin_inset Formula $X$
+\end_inset
+
+中包含
+\begin_inset Formula $n$
+\end_inset
+
+个线性无关的向量, 并且任意
+\begin_inset Formula $n+1$
+\end_inset
+
+个向量都线性相关, 则称线性空间
+\begin_inset Formula $X$
+\end_inset
+
+是有限维, 
+\begin_inset Formula $n=\dim X$
+\end_inset
+
+为
+\begin_inset Formula $X$
+\end_inset
+
+的维数;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+无穷维: 若
+\begin_inset Formula $X$
+\end_inset
+
+不是有限维, 则称
+\begin_inset Formula $X$
+\end_inset
+
+是无穷维的;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+基: 若
+\begin_inset Formula $\dim X=n$
+\end_inset
+
+, 则
+\begin_inset Formula $X$
+\end_inset
+
+中任意
+\begin_inset Formula $n$
+\end_inset
+
+个线性无关的向量称为空间的一个基;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若
+\begin_inset Formula $\dim X=n$
+\end_inset
+
+, {
+\begin_inset Formula $e_{1},...,e_{n}$
+\end_inset
+
+}是其中一个基, 则对任意
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 有
+\begin_inset Formula $x=a_{1}e_{1}+...+a_{n}e_{n}$
+\end_inset
+
+, 且表达方式唯一;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+范数: 设
+\begin_inset Formula $X$
+\end_inset
+
+是线性空间, 映射
+\begin_inset Formula $||\cdot||:X\to\mathbb{R}$
+\end_inset
+
+, 同时满足下面条件时, 则称
+\begin_inset Formula $||\cdot||$
+\end_inset
+
+为
+\begin_inset Formula $X$
+\end_inset
+
+上的范数;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+非负性: 
+\begin_inset Formula $||x||\ge0,||\theta||=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+正齐次性: 
+\begin_inset Formula $\forall a\in K,x\in X$
+\end_inset
+
+, 
+\begin_inset Formula $||ax||=|a|\cdot||x||$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+三角不等式: 
+\begin_inset Formula $||x+y||\le||x||+||y||$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+赋范空间: 称定义了范数的线性空间
+\begin_inset Formula $(X,||\cdot||)$
+\end_inset
+
+为赋范空间, 赋范空间是以范数为度量的度量空间;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+巴拿赫空间(完备赋范空间): 若赋范空间
+\begin_inset Formula $(X,||\cdot||)$
+\end_inset
+
+是完备的, 则称
+\begin_inset Formula $X$
+\end_inset
+
+其为巴拿赫空间;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+常见巴拿赫空间: 
+\begin_inset Formula $(\mathbb{R}^{n},||\cdot||_{p})$
+\end_inset
+
+, 
+\begin_inset Formula $(l^{p},||\cdot||_{p})$
+\end_inset
+
+, 
+\begin_inset Formula $(C[a,b],||\cdot||_{\max})$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+设
+\begin_inset Formula $X$
+\end_inset
+
+是赋范空间, 子空间
+\begin_inset Formula $Y\subset X$
+\end_inset
+
+, 则
+\begin_inset Formula $(Y,||\cdot||)$
+\end_inset
+
+也是赋范空间;
+\end_layout
+
+\begin_layout Enumerate
+闭子空间: 若
+\begin_inset Formula $Y$
+\end_inset
+
+是赋范空间
+\begin_inset Formula $X$
+\end_inset
+
+的子空间, 且
+\begin_inset Formula $Y$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的闭集, 则称
+\begin_inset Formula $Y$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的闭子空间;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+巴拿赫空间
+\begin_inset Formula $(X,||\cdot||)$
+\end_inset
+
+, 子空间
+\begin_inset Formula $Y\subset X$
+\end_inset
+
+, 当且仅当
+\begin_inset Formula $Y$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的闭集, 
+\begin_inset Formula $(Y,||\cdot||)$
+\end_inset
+
+是完备的;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+极限收敛: 设
+\begin_inset Formula $X$
+\end_inset
+
+是赋范空间, 序列{
+\begin_inset Formula $x_{n}$
+\end_inset
+
+}
+\begin_inset Formula $_{n=1}^{\infty}\subset X$
+\end_inset
+
+, 前
+\begin_inset Formula $n$
+\end_inset
+
+项和
+\begin_inset Formula $S_{n}=x_{1}+...+x_{n}\in X$
+\end_inset
+
+, {
+\begin_inset Formula $S_{n}$
+\end_inset
+
+}
+\begin_inset Formula $_{n=1}^{\infty}\subset X$
+\end_inset
+
+.
+ 若存在
+\begin_inset Formula $S\in X$
+\end_inset
+
+, 使得
+\begin_inset Formula $S_{n}\to S,n\to+\infty$
+\end_inset
+
+, 则称
+\begin_inset Formula $\sum\limits _{n=1}^{\infty}x_{n}$
+\end_inset
+
+收敛, 记
+\begin_inset Formula $S=\sum\limits _{n=1}^{\infty}x_{n}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+Schauder基: 若赋范空间
+\begin_inset Formula $X$
+\end_inset
+
+中存在{
+\begin_inset Formula $e_{n}$
+\end_inset
+
+}
+\begin_inset Formula $_{n=1}^{\infty}$
+\end_inset
+
+, 使得对任意
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 存在唯一{
+\begin_inset Formula $a_{n}$
+\end_inset
+
+}
+\begin_inset Formula $_{n=1}^{\infty}\subset K$
+\end_inset
+
+, 满足
+\begin_inset Formula $\lim\limits _{n\to+\infty}||\sum\limits _{i=1}^{n}a_{i}e_{i}-x||=0$
+\end_inset
+
+, 则称序列{
+\begin_inset Formula $e_{n}$
+\end_inset
+
+}
+\begin_inset Formula $_{n=1}^{\infty}$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的一个Schauder基, 记作
+\begin_inset Formula $\sum\limits _{i=1}^{\infty}a_{i}e_{i}=x$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+赋范空间的完备化: 设
+\begin_inset Formula $X$
+\end_inset
+
+是赋范空间, 则存在一个巴拿赫空间(完备的赋范空间)
+\begin_inset Formula $\hat{X}$
+\end_inset
+
+和稠密子空间
+\begin_inset Formula $W\subset\hat{X}$
+\end_inset
+
+, 使得
+\begin_inset Formula $X$
+\end_inset
+
+与
+\begin_inset Formula $W$
+\end_inset
+
+是等距同构;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbb{R}^{1}$
+\end_inset
+
+上的一个定理: 若{
+\begin_inset Formula $a_{n}$
+\end_inset
+
+}
+\begin_inset Formula $_{n=1}^{\infty}\subset\mathbb{R}$
+\end_inset
+
+有界, 则其存在一个子列{
+\begin_inset Formula $x_{n_{i}}$
+\end_inset
+
+}
+\begin_inset Formula $_{i=1}^{\infty}\subset$
+\end_inset
+
+{
+\begin_inset Formula $a_{n}$
+\end_inset
+
+}
+\begin_inset Formula $_{n=1}^{\infty}$
+\end_inset
+
+使得
+\begin_inset Formula $x_{n_{i}}\to x\in\mathbb{R}(i\to+\infty)$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+在
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+上定义范数
+\begin_inset Formula $||x||_{1}=|x_{1}|+...+|x_{n}|$
+\end_inset
+
+, 若{
+\begin_inset Formula $x_{n}$
+\end_inset
+
+}
+\begin_inset Formula $_{n=1}^{\infty}\subset\mathbb{R}^{m}$
+\end_inset
+
+有界, 则存在{
+\begin_inset Formula $x_{n_{i}}$
+\end_inset
+
+}
+\begin_inset Formula $_{i=1}^{\infty}\subset$
+\end_inset
+
+{
+\begin_inset Formula $a_{n}$
+\end_inset
+
+}
+\begin_inset Formula $_{n=1}^{\exists n}$
+\end_inset
+
+, 使得
+\begin_inset Formula $x_{n_{i}}\to x\in\mathbb{R}^{m},(i\to+\infty)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+设
+\begin_inset Formula $X$
+\end_inset
+
+是赋范空间, {
+\begin_inset Formula $x_{1},...,x_{n}$
+\end_inset
+
+}
+\begin_inset Formula $\subset X$
+\end_inset
+
+线性无关, 则存在常数
+\begin_inset Formula $C>0$
+\end_inset
+
+, 使得对任何
+\begin_inset Formula $n$
+\end_inset
+
+个标量
+\begin_inset Formula $\beta_{1},...,\beta_{n}\in K$
+\end_inset
+
+满足
+\begin_inset Formula $\sum\limits _{i=1}^{n}|\beta_{i}|=1$
+\end_inset
+
+, 由
+\begin_inset Formula $||\beta_{1}x_{1}+...+\beta_{n}x_{n}||\ge C>0$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+设
+\begin_inset Formula $X$
+\end_inset
+
+是赋范空间, {
+\begin_inset Formula $x_{1},...,x_{n}$
+\end_inset
+
+}
+\begin_inset Formula $\subset X$
+\end_inset
+
+线性无关, 则存在常数
+\begin_inset Formula $C>0$
+\end_inset
+
+, 使得对任何
+\begin_inset Formula $n$
+\end_inset
+
+个标量
+\begin_inset Formula $\alpha_{1},...,\alpha_{n}\in K$
+\end_inset
+
+, 
+\begin_inset Formula $||\alpha_{1}x_{1}+...+\alpha_{n}x_{n}||\ge C(|\alpha_{1}|+...+|\alpha_{n}|)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+赋范空间子空间的完备性: 赋范空间
+\begin_inset Formula $X$
+\end_inset
+
+的任一有限维子空间
+\begin_inset Formula $Y$
+\end_inset
+
+是完备的;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+有限维的赋范空间, 一定是巴拿赫空间;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+设
+\begin_inset Formula $X$
+\end_inset
+
+是赋范空间, 
+\begin_inset Formula $Y\subset X$
+\end_inset
+
+, 
+\begin_inset Formula $Y$
+\end_inset
+
+是有限维子空间, 则
+\begin_inset Formula $Y$
+\end_inset
+
+一定是
+\begin_inset Formula $X$
+\end_inset
+
+中的闭集;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+等价范数: 设
+\begin_inset Formula $X$
+\end_inset
+
+是一个线性空间, 
+\begin_inset Formula $||\cdot||$
+\end_inset
+
+和
+\begin_inset Formula $||\cdot||_{0}$
+\end_inset
+
+
+\begin_inset Formula $:X\to\mathbb{R}$
+\end_inset
+
+都是范数.
+ 若
+\begin_inset Formula $\exists a,b>0$
+\end_inset
+
+使得
+\begin_inset Formula $\forall x\in X,a||x||_{0}\le||x||\le b||x||_{0}$
+\end_inset
+
+, 则称
+\begin_inset Formula $||\cdot||$
+\end_inset
+
+和
+\begin_inset Formula $||\cdot||_{0}$
+\end_inset
+
+等价;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+等价范数不改变收敛性: 若
+\begin_inset Formula $||\cdot||$
+\end_inset
+
+和
+\begin_inset Formula $||\cdot||_{0}$
+\end_inset
+
+等价, 则
+\begin_inset Formula $\{x_{n}\}_{n=1}^{\infty}\subset X,x_{0}\in X,x_{n}\to x_{0}$
+\end_inset
+
+在
+\begin_inset Formula $||\cdot||$
+\end_inset
+
+下, 当且仅当
+\begin_inset Formula $x_{n}\to x_{0}$
+\end_inset
+
+在
+\begin_inset Formula $||\cdot||_{0}$
+\end_inset
+
+下;
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $X$
+\end_inset
+
+是有限维线性空间, 任意两种范数
+\begin_inset Formula $||\cdot||$
+\end_inset
+
+和
+\begin_inset Formula $||\cdot||_{0}$
+\end_inset
+
+一定是等价的;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+有限维上的任意范数都与
+\begin_inset Formula $||\cdot||_{2}$
+\end_inset
+
+等价;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+紧空间: 设度量空间
+\begin_inset Formula $X$
+\end_inset
+
+的每一个序列都有收敛的子序列, 则称空间
+\begin_inset Formula $X$
+\end_inset
+
+是一个紧的; 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+紧子集: 设
+\begin_inset Formula $M\subset X$
+\end_inset
+
+, 
+\begin_inset Formula $(M,d)$
+\end_inset
+
+是
+\begin_inset Formula $(X,d)$
+\end_inset
+
+的子空间, 若
+\begin_inset Formula $(M,d)$
+\end_inset
+
+是紧的, 则称
+\begin_inset Formula $M$
+\end_inset
+
+是紧子集;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $M$
+\end_inset
+
+是紧集, 当且仅当
+\begin_inset Formula $\forall\{x_{n}\}_{n=1}^{\infty}\subset M,\exists\{x_{n_{i}}\}_{i=1}^{\infty}\subset\{x_{n}\}_{n=1}^{\infty},s.t.:x_{n_{i}}\to x\in M(i\to\infty)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+度量空间
+\begin_inset Formula $X$
+\end_inset
+
+中紧子集
+\begin_inset Formula $M$
+\end_inset
+
+一定是有界闭集;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若
+\begin_inset Formula $M$
+\end_inset
+
+是一个紧集, 则
+\begin_inset Formula $M$
+\end_inset
+
+是一个有界闭集;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+若
+\begin_inset Formula $X$
+\end_inset
+
+是有限维赋范空间, 则有界闭集
+\begin_inset Formula $M\subset X$
+\end_inset
+
+是一个紧子集;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+黎斯引理: 设
+\begin_inset Formula $Z$
+\end_inset
+
+是赋范空间, 真子空间
+\begin_inset Formula $Y\subset Z$
+\end_inset
+
+, 若
+\begin_inset Formula $Y$
+\end_inset
+
+是闭集, 则对
+\begin_inset Formula $\forall\theta\in(0,1)$
+\end_inset
+
+, 都
+\begin_inset Formula $\exists z,||z||=1,s.t.:d(z,Y)=\inf\limits _{y\in Y}||z-y||\ge\theta$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+有限维赋范空间条件: 设
+\begin_inset Formula $X$
+\end_inset
+
+是一个赋范空间, 若闭单位球
+\begin_inset Formula $M=\{x\in X|||x||\le1\}$
+\end_inset
+
+是紧集, 则
+\begin_inset Formula $X$
+\end_inset
+
+是有限维赋范空间;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+有限维赋范空间
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+赋范空间中的闭单位球是紧集;
+\end_layout
+
+\begin_layout Enumerate
+无穷维赋范空间
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+赋范空间中的闭单位球不是紧集;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+令
+\begin_inset Formula $(X,d)$
+\end_inset
+
+和
+\begin_inset Formula $(Y,d)$
+\end_inset
+
+是度量空间, 映射
+\begin_inset Formula $T:(X,d)\to(Y,d)$
+\end_inset
+
+连续, 则
+\begin_inset Formula $X$
+\end_inset
+
+中紧子集
+\begin_inset Formula $M$
+\end_inset
+
+在
+\begin_inset Formula $T$
+\end_inset
+
+下的象是紧的;
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $X$
+\end_inset
+
+是度量空间, 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+是紧子集, 
+\begin_inset Formula $T:(X,d)\to(\mathbb{R},|\cdot|)$
+\end_inset
+
+连续, 则
+\begin_inset Formula $T$
+\end_inset
+
+在某点达到最大值(最小值);
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+线性算子: 
+\begin_inset Formula $X,Y$
+\end_inset
+
+是数域
+\begin_inset Formula $K$
+\end_inset
+
+上的线性空间, 
+\begin_inset Formula $D(T)$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+的子空间, 算子
+\begin_inset Formula $T:D(T)\subset X\to Y$
+\end_inset
+
+满足
+\begin_inset Formula $\forall x,y\in X,\forall a\in K$
+\end_inset
+
+,
+\begin_inset Formula $T(x+y)=Tx+Ty$
+\end_inset
+
+和
+\begin_inset Formula $T(ax)=aTx$
+\end_inset
+
+, 则称
+\begin_inset Formula $T$
+\end_inset
+
+为线性算子.
+ 其中: 
+\begin_inset Formula $D(T)$
+\end_inset
+
+表示
+\begin_inset Formula $T$
+\end_inset
+
+的定义域, 
+\begin_inset Formula $R(T)$
+\end_inset
+
+表示
+\begin_inset Formula $T$
+\end_inset
+
+的值域, 
+\begin_inset Formula $N(T)=\{x\in D(T),Tx=\theta\}$
+\end_inset
+
+表示
+\begin_inset Formula $T$
+\end_inset
+
+的零空间;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+线性算子的性质: 如果
+\begin_inset Formula $T:D(T)\subset X\to Y$
+\end_inset
+
+是线性算子, 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+则
+\begin_inset Formula $R(T)$
+\end_inset
+
+是
+\begin_inset Formula $Y$
+\end_inset
+
+中的线性子空间;
+\end_layout
+
+\begin_layout Enumerate
+则零空间
+\begin_inset Formula $N(T)$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+的线性子空间;
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $\dim D(T)=n<+\infty$
+\end_inset
+
+, 则
+\begin_inset Formula $\dim R(T)\le n$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若
+\begin_inset Formula $T$
+\end_inset
+
+存在逆映射
+\begin_inset Formula $T^{-1}$
+\end_inset
+
+, 则
+\begin_inset Formula $\dim D(T)=\dim R(T)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+则
+\begin_inset Formula $T$
+\end_inset
+
+是单射当且仅当
+\begin_inset Formula $Tx=\theta\Leftrightarrow x=\theta$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+线性算子的逆算子: 线性算子
+\begin_inset Formula $T:D(T)\subset X\to Y$
+\end_inset
+
+, 若
+\begin_inset Formula $T$
+\end_inset
+
+存在
+\begin_inset Formula $T^{-1}:R(T)\to D(T)$
+\end_inset
+
+, 则
+\begin_inset Formula $T^{-1}$
+\end_inset
+
+也是线性算子;
+\end_layout
+
+\begin_layout Enumerate
+有界算子: 设
+\begin_inset Formula $X,Y$
+\end_inset
+
+是赋范空间, 线性算子
+\begin_inset Formula $T:D(T)\subset X\to Y$
+\end_inset
+
+, 若存在一个常数
+\begin_inset Formula $C\ge0$
+\end_inset
+
+, 使得
+\begin_inset Formula $\forall x\in D(T)$
+\end_inset
+
+都有
+\begin_inset Formula $||Tx||\le C||x||$
+\end_inset
+
+, 则称算子
+\begin_inset Formula $T$
+\end_inset
+
+是有界算子;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+有界算子的范数: 有界线性算子
+\begin_inset Formula $T:D(T)\subset X\to Y$
+\end_inset
+
+, 称
+\begin_inset Formula $||T||=\sup\limits _{x\in X,x\neq\theta}\frac{||Tx||}{||x||}<+\infty$
+\end_inset
+
+是映射
+\begin_inset Formula $T$
+\end_inset
+
+的范数;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+有界线性算子: 设
+\begin_inset Formula $X,Y$
+\end_inset
+
+是赋范空间, 
+\begin_inset Formula $K$
+\end_inset
+
+是数域, 所有有界线性算子集合
+\begin_inset Formula $B(X,Y):=\{T:X\to Y\texttt{是有界线性算子}\}$
+\end_inset
+
+.
+ 定义加法
+\begin_inset Formula $+:B(X,Y)\times B(X,Y)\to B(X,Y)$
+\end_inset
+
+为
+\begin_inset Formula $(T_{1}+T_{2})(x)=T_{1}x+T_{2}x$
+\end_inset
+
+, 定义数乘
+\begin_inset Formula $\cdot:K\times B(X,Y)\to B(X,Y)$
+\end_inset
+
+为
+\begin_inset Formula $\alpha\cdot T(x)=\alpha Tx$
+\end_inset
+
+, 定义范数
+\begin_inset Formula $||\cdot||:B(X,Y)\to\mathbb{R}$
+\end_inset
+
+为
+\begin_inset Formula $||T||=\sup\limits _{x\in X,x\neq\theta}\frac{||Tx||}{||x||}<+\infty$
+\end_inset
+
+.
+ 则集合
+\begin_inset Formula $(B(X,Y),K,+,\cdot,||\cdot||)$
+\end_inset
+
+是赋范空间;
+\end_layout
+
+\begin_layout Enumerate
+有界线性算子性质: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若
+\begin_inset Formula $T\in B(X,Y)$
+\end_inset
+
+, 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+则
+\begin_inset Formula $\forall x\in X,||Tx||\le||T||\cdot||x||$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+则
+\begin_inset Formula $||T||=\sup\limits _{x\in X,||x||=1}||Tx||$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+若
+\begin_inset Formula $X$
+\end_inset
+
+是有限维的赋范空间, 则线性算子
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+有界;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若
+\begin_inset Formula $X$
+\end_inset
+
+,
+\begin_inset Formula $Y$
+\end_inset
+
+是赋范空间, 线性算子
+\begin_inset Formula $T:D(T)\subset X\to Y$
+\end_inset
+
+连续, 当且仅当
+\begin_inset Formula $T$
+\end_inset
+
+是有界算子;
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $X,Y$
+\end_inset
+
+是赋范空间, 线性算子
+\begin_inset Formula $T:D(T)\subset X\to Y$
+\end_inset
+
+, 则
+\begin_inset Formula $T$
+\end_inset
+
+在
+\begin_inset Formula $x_{0}$
+\end_inset
+
+连续, 当且仅当
+\begin_inset Formula $T$
+\end_inset
+
+处处连续;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+有界线性算子
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+, 则零空间
+\begin_inset Formula $N(T)=\{x\in X,Tx=0\}$
+\end_inset
+
+是闭集;
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+求算子范数的方法: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\forall x\in X,||Tx||\le C||x||$
+\end_inset
+
+, 从而
+\begin_inset Formula $||T||=\sup\limits _{x\in X}\frac{||Tx||}{||x||}\le C$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+取特殊
+\begin_inset Formula $x_{0}\in X$
+\end_inset
+
+, 使得
+\begin_inset Formula $||T||=\sup\limits _{x\in X}\frac{||Tx||}{||x||}\ge\frac{||Tx||}{||x||}\ge C$
+\end_inset
+
+或
+\begin_inset Formula $C-\varepsilon$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+综上
+\begin_inset Formula $||T||=C$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+算子相等: 对于算子
+\begin_inset Formula $T_{1},T_{2}:X\to Y$
+\end_inset
+
+, 若
+\begin_inset Formula $D(T_{1})=D(T_{2})$
+\end_inset
+
+, 且
+\begin_inset Formula $\forall x\in D(T_{1}),T_{1}x=T_{2}x$
+\end_inset
+
+, 则称算子
+\begin_inset Formula $T_{1}$
+\end_inset
+
+与
+\begin_inset Formula $T_{2}$
+\end_inset
+
+相等, 记作
+\begin_inset Formula $T_{1}=T_{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+限制算子: 对于算子
+\begin_inset Formula $T:D(T)\to Y$
+\end_inset
+
+, 子集
+\begin_inset Formula $B\subset D(T)$
+\end_inset
+
+, 令
+\begin_inset Formula $T|_{B}:B\to Y$
+\end_inset
+
+满足
+\begin_inset Formula $\forall x\in B,T_{B}(x)=Tx$
+\end_inset
+
+, 则称
+\begin_inset Formula $T_{B}$
+\end_inset
+
+为
+\begin_inset Formula $T$
+\end_inset
+
+在
+\begin_inset Formula $B$
+\end_inset
+
+上的限制算子;
+\end_layout
+
+\begin_layout Enumerate
+延拓算子: 对于算子
+\begin_inset Formula $T:D(T)\to Y$
+\end_inset
+
+, 若集合
+\begin_inset Formula $M$
+\end_inset
+
+满足
+\begin_inset Formula $D(T)\subset M$
+\end_inset
+
+, 算子
+\begin_inset Formula $\tilde{T}:M\to Y$
+\end_inset
+
+满足
+\begin_inset Formula $\tilde{T}|_{D(T)}=T$
+\end_inset
+
+, 则称
+\begin_inset Formula $\tilde{T}$
+\end_inset
+
+为
+\begin_inset Formula $T$
+\end_inset
+
+的延拓算子;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若
+\begin_inset Formula $X$
+\end_inset
+
+是赋范空间, 
+\begin_inset Formula $Y$
+\end_inset
+
+是巴拿赫空间, 若线性算子
+\begin_inset Formula $T:D(T)\subset X\to Y$
+\end_inset
+
+有界, 则
+\begin_inset Formula $T$
+\end_inset
+
+有延拓算子
+\begin_inset Formula $\tilde{T}:\overline{D(T)}\to Y$
+\end_inset
+
+也是有界线性算子, 且
+\begin_inset Formula $||\tilde{T}||=||T||$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+泛函: 若算子
+\begin_inset Formula $T$
+\end_inset
+
+的值域
+\begin_inset Formula $R(T)$
+\end_inset
+
+落在
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+或
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+内, 则称
+\begin_inset Formula $T$
+\end_inset
+
+是一个泛函;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若
+\begin_inset Formula $f:D(f)\subset X\to K$
+\end_inset
+
+(
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+或
+\begin_inset Formula $\mathbb{C}$
+\end_inset
+
+)线性, 则称
+\begin_inset Formula $f$
+\end_inset
+
+为线性泛函;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+映射关于基的表示: 设
+\begin_inset Formula $X,Y$
+\end_inset
+
+是有限维线性空间, 
+\begin_inset Formula $\dim X=n,\{e_{1},...,e_{n}\}$
+\end_inset
+
+为
+\begin_inset Formula $X$
+\end_inset
+
+的一个基, 
+\begin_inset Formula $\dim Y=m,\{b_{1},...,b_{m}\}$
+\end_inset
+
+为
+\begin_inset Formula $Y$
+\end_inset
+
+的一个基, 
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+是一个线性算子, 
+\begin_inset Formula $\forall x\in X,x=\sum\limits _{i=1}^{n}\varphi_{i}e_{i}$
+\end_inset
+
+(即
+\begin_inset Formula $x=(e_{1},...,e_{n})\left(\begin{array}{c}
+\varphi_{1}\\
+\dot{:}\\
+\varphi_{n}
+\end{array}\right)$
+\end_inset
+
+), 设
+\begin_inset Formula $y=Tx=(b_{1},...,b_{m})\left(\begin{array}{c}
+\eta_{1}\\
+\dot{:}\\
+\eta_{m}
+\end{array}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $Te_{i}=(b_{1},...,b_{m})\left(\begin{array}{c}
+\tau_{1}^{i}\\
+\dot{:}\\
+\tau_{m}^{i}
+\end{array}\right),1\le i\le n$
+\end_inset
+
+, 
+\begin_inset Formula $Tx=T(e_{1},...,e_{n})\left(\begin{array}{c}
+\varphi_{1}\\
+\dot{:}\\
+\varphi_{n}
+\end{array}\right)$
+\end_inset
+
+
+\begin_inset Formula $=(Te_{1},...,Te_{n})\left(\begin{array}{c}
+\varphi_{1}\\
+\dot{:}\\
+\varphi_{n}
+\end{array}\right)$
+\end_inset
+
+
+\begin_inset Formula $=(b_{1},...,b_{m})\left(\begin{array}{ccc}
+\tau_{1}^{1} & ... & \tau_{1}^{n}\\
+\dot{:} & \dot{.}\cdot\dot{.} & \dot{:}\\
+\tau_{m}^{1} & ... & \tau_{m}^{n}
+\end{array}\right)\left(\begin{array}{c}
+\varphi_{1}\\
+\dot{:}\\
+\varphi_{n}
+\end{array}\right)$
+\end_inset
+
+, 故
+\begin_inset Formula $\left(\begin{array}{c}
+\eta_{1}\\
+\dot{:}\\
+\eta_{m}
+\end{array}\right)=\left(\begin{array}{ccc}
+\tau_{1}^{1} & ... & \tau_{1}^{n}\\
+\dot{:} & \dot{.}\cdot\dot{.} & \dot{:}\\
+\tau_{m}^{1} & ... & \tau_{m}^{n}
+\end{array}\right)\left(\begin{array}{c}
+\varphi_{1}\\
+\dot{:}\\
+\varphi_{n}
+\end{array}\right)$
+\end_inset
+
+.
+ 令
+\begin_inset Formula $\tau=(\tau_{ij})_{m\times n}$
+\end_inset
+
+, 称
+\begin_inset Formula $\tau$
+\end_inset
+
+是
+\begin_inset Formula $T$
+\end_inset
+
+关于两个基的一个表示;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+考虑泛函
+\begin_inset Formula $f:X\to\mathbb{R},\dim X=n$
+\end_inset
+
+, 基为
+\begin_inset Formula $\{e_{1},...,e_{n}\}$
+\end_inset
+
+, 
+\begin_inset Formula $\forall x\in X,x=\sum\limits _{i=1}^{n}\varphi_{i}e_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $f(x)=\sum\limits _{i=1}^{n}\varphi_{i}f(e_{i})$
+\end_inset
+
+, 即
+\begin_inset Formula $\{f(e_{1}),...,f(e_{n})\}$
+\end_inset
+
+决定了一个泛函
+\begin_inset Formula $f$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+对偶基: 线性泛函
+\begin_inset Formula $f_{1},...,f_{n}:X\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $f_{k}(e_{j})=\delta_{jk}=\begin{cases}
+1 & k=j\\
+0 & k\neq j
+\end{cases}$
+\end_inset
+
+, 称
+\begin_inset Formula $\{f_{1},...,f_{n}\}$
+\end_inset
+
+为
+\begin_inset Formula $\{e_{1},...,e_{n}\}$
+\end_inset
+
+的对偶基;
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $X$
+\end_inset
+
+是
+\begin_inset Formula $n$
+\end_inset
+
+维线性空间, 
+\begin_inset Formula $\{e_{1},...,e_{n}\}$
+\end_inset
+
+是一个基, 令线性空间
+\begin_inset Formula $X^{*}=\{f:X\to K\texttt{是线性泛函}\}$
+\end_inset
+
+, 
+\begin_inset Formula $\{f_{1},...,f_{n}\}$
+\end_inset
+
+为
+\begin_inset Formula $\{e_{1},...,e_{n}\}$
+\end_inset
+
+的对偶基, 则
+\begin_inset Formula $\dim X^{*}=n$
+\end_inset
+
+, 且
+\begin_inset Formula $\{f_{1},...,f_{n}\}$
+\end_inset
+
+是
+\begin_inset Formula $X^{*}$
+\end_inset
+
+中的一个基;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+设
+\begin_inset Formula $X$
+\end_inset
+
+是有限维线性空间, 
+\begin_inset Formula $x_{0}\in X$
+\end_inset
+
+, 若
+\begin_inset Formula $\forall f\in X^{*}$
+\end_inset
+
+都有
+\begin_inset Formula $f(x)=0\in K$
+\end_inset
+
+, 则
+\begin_inset Formula $x_{0}=\theta$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $X,Y$
+\end_inset
+
+是赋范空间, 若
+\begin_inset Formula $Y$
+\end_inset
+
+完备, 则
+\begin_inset Formula $B(X,Y)$
+\end_inset
+
+(有界线性算子集合)是巴拿赫空间;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+对偶空间: 设
+\begin_inset Formula $X$
+\end_inset
+
+是赋范空间, 
+\begin_inset Formula $X'=\{f:X\to K\texttt{有界线性泛函}\}$
+\end_inset
+
+, 
+\begin_inset Formula $||f||=\sup\limits _{x\in X,x\neq0}\frac{|f(x)|}{||x||}$
+\end_inset
+
+, 
+\begin_inset Formula $(X',||\cdot||)$
+\end_inset
+
+称为
+\begin_inset Formula $X$
+\end_inset
+
+的对偶空间;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+对偶空间
+\begin_inset Formula $X'$
+\end_inset
+
+是巴拿赫空间;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+空间同构: 设
+\begin_inset Formula $X,\tilde{X}$
+\end_inset
+
+是赋范空间, 若
+\begin_inset Formula $\exists T:(X,||\cdot||)\to(\tilde{X},||\cdot||)$
+\end_inset
+
+是线性双射, 且映射保持范数不变(
+\begin_inset Formula $||Tx||=||x||$
+\end_inset
+
+), 则称
+\begin_inset Formula $X$
+\end_inset
+
+与
+\begin_inset Formula $\tilde{X}$
+\end_inset
+
+同构, 记作
+\begin_inset Formula $X=\tilde{X}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+作业: 20230317
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+证明同一个域上的两个矢量空间
+\begin_inset Formula $X_{1}$
+\end_inset
+
+和
+\begin_inset Formula $X_{2}$
+\end_inset
+
+的笛卡尔积
+\begin_inset Formula $X=X_{1}\times X_{2}$
+\end_inset
+
+, 按
+\begin_inset Formula $\begin{cases}
+(x_{1},x_{2})+(y_{1},y_{2})=(x_{1}+y_{1},x_{2}+y_{2})\\
+\alpha(x_{1},x_{2})=(\alpha x_{1},\alpha x_{2})
+\end{cases}$
+\end_inset
+
+定义代数运算使
+\begin_inset Formula $X$
+\end_inset
+
+成为一个矢量空间;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+作业: 20230425
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+线性算子
+\begin_inset Formula $T_{1}:Y\to Z,T_{2}:X\to Y$
+\end_inset
+
+有界, 则
+\begin_inset Formula $T_{1}\circ T_{2}:X\to Z$
+\end_inset
+
+也是有界线性算子, 且
+\begin_inset Formula $||T_{1}\circ T_{2}||\le||T_{1}||\cdot||T_{2}||$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(C[a,b],||\cdot||)$
+\end_inset
+
+, 
+\begin_inset Formula $||\cdot||=\sup\limits _{a\le x\le b}|x(t)|$
+\end_inset
+
+, 证明算子
+\begin_inset Formula $f:(C[a,b],||\cdot||)\to(\mathbb{R},|\cdot|)$
+\end_inset
+
+(
+\begin_inset Formula $f(x)=x(t_{0})$
+\end_inset
+
+)是有界线性泛函, 且
+\begin_inset Formula $||f||=1$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Section
+内积空间
+\end_layout
+
+\begin_layout Enumerate
+内积: 设
+\begin_inset Formula $(X,K)$
+\end_inset
+
+线性空间, 内积运算
+\begin_inset Formula $<\cdot,\cdot>:X\times X\to K$
+\end_inset
+
+应该满足:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+双线性: 
+\begin_inset Formula $\forall\alpha,\beta\in K,x_{1},x_{2}\in X,<\alpha x_{1}+\beta x_{2},y>=\alpha<x_{1},y>+\beta<x_{2},y>$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+共轭线性: 
+\begin_inset Formula $<x,\alpha y_{1}+\beta y_{2}>=\bar{\alpha}(x,y_{1})+\bar{\beta}(x,y_{2})$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+共轭对称性: 
+\begin_inset Formula $\forall x,y\in X,<x,y>=\overline{<y,x>}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $<x,x>\ge0$
+\end_inset
+
+, 对于
+\begin_inset Formula $<x,x>=0$
+\end_inset
+
+当且仅当
+\begin_inset Formula $x=\theta$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+内积空间: 装配内积结构
+\begin_inset Formula $<\cdot,\cdot>$
+\end_inset
+
+的空间
+\begin_inset Formula $(X,<\cdot,\cdot>)$
+\end_inset
+
+被称为内积空间;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+内积诱导的范数: 
+\begin_inset Formula $||x||:=\sqrt{<x,x>}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+引理: 
+\begin_inset Formula $\forall x,y\in X,|<x,y>|\le||x||\cdot||y||$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+施瓦兹不等式: 
+\begin_inset Formula $|<x,y>|\le||x||\cdot||y||$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+希尔伯特空间: 若
+\begin_inset Formula $(X,<\cdot,\cdot>)$
+\end_inset
+
+是完备的, 则称
+\begin_inset Formula $(X,<\cdot,\cdot>)$
+\end_inset
+
+是希尔伯特空间;
+\end_layout
+
+\begin_layout Enumerate
+平行四边形法则: 对内积空间
+\begin_inset Formula $(X,<\cdot,\cdot>)$
+\end_inset
+
+, 
+\begin_inset Formula $||x+y||^{2}+||x-y||^{2}=2(||x||^{2}+||y||^{2})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+正交: 在内积空间
+\begin_inset Formula $(X,<\cdot,\cdot>)$
+\end_inset
+
+中, 
+\begin_inset Formula $x,y\in X$
+\end_inset
+
+, 
+\begin_inset Formula $A,B\subset X$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+若
+\begin_inset Formula $<x,y>=0$
+\end_inset
+
+则称
+\begin_inset Formula $x$
+\end_inset
+
+与
+\begin_inset Formula $y$
+\end_inset
+
+正交, 记为
+\begin_inset Formula $x\perp y$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $\forall z\in A$
+\end_inset
+
+, 有
+\begin_inset Formula $<x,y>=0$
+\end_inset
+
+, 则称
+\begin_inset Formula $x$
+\end_inset
+
+与
+\begin_inset Formula $A$
+\end_inset
+
+正交, 记为
+\begin_inset Formula $x\perp A$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $\forall z\in A,h\in B$
+\end_inset
+
+, 都有
+\begin_inset Formula $<z,h>=0$
+\end_inset
+
+, 则称
+\begin_inset Formula $A$
+\end_inset
+
+与
+\begin_inset Formula $B$
+\end_inset
+
+正交, 记为
+\begin_inset Formula $A\perp B$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+内积的连续性: 对内积空间
+\begin_inset Formula $(X,<\cdot,\cdot>)$
+\end_inset
+
+, 序列
+\begin_inset Formula $\{x_{n}\},\{y_{n}\}\subset X$
+\end_inset
+
+, 若
+\begin_inset Formula $x_{n}\to x,y_{n}\to y$
+\end_inset
+
+, 则
+\begin_inset Formula $<x_{n},y_{n}>\to<x,y>$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+内积空间中点到子空间的距离: 在度量空间
+\begin_inset Formula $(X,d)$
+\end_inset
+
+中, 
+\begin_inset Formula $x\in X,M\subset X$
+\end_inset
+
+, 
+\begin_inset Formula $\delta=d(x,M)=\inf\limits _{y\in M}d(x,y)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+凸集: 设
+\begin_inset Formula $X$
+\end_inset
+
+是线性空间, 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+, 若
+\begin_inset Formula $\forall x,y\in M$
+\end_inset
+
+, 有凸组合
+\begin_inset Formula $\forall\lambda\in[0,1],\exists z\in M,z=\lambda x+(1-\lambda)y$
+\end_inset
+
+, 则称
+\begin_inset Formula $M$
+\end_inset
+
+是凸集;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+点到集合距离可达的条件: 设
+\begin_inset Formula $(X,<\cdot,\cdot>)$
+\end_inset
+
+是内积空间, 
+\begin_inset Formula $M\subset X,M\neq\phi$
+\end_inset
+
+, 若
+\begin_inset Formula $M$
+\end_inset
+
+是完备的凸集, 则
+\begin_inset Formula $\forall x\in X,\exists!y\in M:d(x,M)=\inf\limits _{\tilde{y}\in M}||x-\tilde{y}||=||x-y||$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+垂足存在条件: 设
+\begin_inset Formula $(X,<\cdot,\cdot>)$
+\end_inset
+
+是内积空间, 
+\begin_inset Formula $Y\subset X,$
+\end_inset
+
+ 
+\begin_inset Formula $Y$
+\end_inset
+
+是完备子空间, 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 则
+\begin_inset Formula $\exists!y\in Y,s.t.:||x-y||=\inf\limits _{\tilde{y}\in Y}||x-\tilde{y}||=d(x,Y)$
+\end_inset
+
+.
+ 令
+\begin_inset Formula $z=x-y$
+\end_inset
+
+, 则
+\begin_inset Formula $z\perp Y$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+直和: 设
+\begin_inset Formula $X$
+\end_inset
+
+为线性空间, 
+\begin_inset Formula $Y,Z\subset X$
+\end_inset
+
+, 若
+\begin_inset Formula $\forall x\in X$
+\end_inset
+
+, 都
+\begin_inset Formula $\exists!x=y+z,y\in Y,z\in Z$
+\end_inset
+
+, 则称
+\begin_inset Formula $X$
+\end_inset
+
+为子空间
+\begin_inset Formula $Y,Z$
+\end_inset
+
+的直和, 记作
+\begin_inset Formula $X=Y\oplus Z$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+正交补: 设
+\begin_inset Formula $(X,<\cdot,\cdot>)$
+\end_inset
+
+是内积空间, 
+\begin_inset Formula $M\subset X$
+\end_inset
+
+非空, 称
+\begin_inset Formula $M^{\perp}=\{x\in X|x\perp M\}$
+\end_inset
+
+为
+\begin_inset Formula $M$
+\end_inset
+
+的正交补(集合);
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+无论
+\begin_inset Formula $M$
+\end_inset
+
+是不是子空间, 
+\begin_inset Formula $M^{\perp}$
+\end_inset
+
+都是子空间;
+\end_layout
+
+\begin_layout Enumerate
+无论
+\begin_inset Formula $M$
+\end_inset
+
+是不是闭集, 
+\begin_inset Formula $M^{\perp}$
+\end_inset
+
+都是闭集(进一步是闭子空间);
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+直和分解: 设
+\begin_inset Formula $(H,<\cdot,\cdot>)$
+\end_inset
+
+是希尔伯特空间, 
+\begin_inset Formula $Y\subset H$
+\end_inset
+
+是闭子空间, 则
+\begin_inset Formula $H=Y\oplus Y^{\perp}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $Y\cap Y^{\perp}=\{\theta\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+正交投影: 若
+\begin_inset Formula $x\in H$
+\end_inset
+
+, 
+\begin_inset Formula $x=y+z,y\in Y,z\in Y^{\perp}$
+\end_inset
+
+, 则称
+\begin_inset Formula $y,z$
+\end_inset
+
+分别为
+\begin_inset Formula $x$
+\end_inset
+
+在
+\begin_inset Formula $Y,Y^{\perp}$
+\end_inset
+
+上的正交投影;
+\end_layout
+
+\begin_layout Enumerate
+投影算子: 
+\begin_inset Formula $P:H\to Y$
+\end_inset
+
+, 
+\begin_inset Formula $x\to Px=y$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+幂等性: 
+\begin_inset Formula $P^{2}=P$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+设
+\begin_inset Formula $H$
+\end_inset
+
+是希尔伯特空间, 
+\begin_inset Formula $Y\subset H$
+\end_inset
+
+是闭子空间, 则
+\begin_inset Formula $(Y^{\perp})^{\perp}=Y$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $X$
+\end_inset
+
+是内积空间, 若
+\begin_inset Formula $A\subset B\subset X$
+\end_inset
+
+, 则
+\begin_inset Formula $B^{\perp}\subset A^{\perp}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+对希尔伯特空间
+\begin_inset Formula $H$
+\end_inset
+
+, 
+\begin_inset Formula $M\subset H$
+\end_inset
+
+是非空子集, 当且仅当
+\begin_inset Formula $M^{\perp}=\{\theta\}$
+\end_inset
+
+, 
+\begin_inset Formula $span\{M\}$
+\end_inset
+
+在
+\begin_inset Formula $H$
+\end_inset
+
+中稠密;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+正交集: 对内积空间
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $S=\{e_{\alpha}|\alpha\in A\}\subset X$
+\end_inset
+
+, 若
+\begin_inset Formula $\forall\alpha,\beta\in A,\alpha\neq\beta$
+\end_inset
+
+, 都有
+\begin_inset Formula $e_{\alpha}\perp e_{\beta}$
+\end_inset
+
+, 则称
+\begin_inset Formula $S$
+\end_inset
+
+为正交集;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+正交规范集: 若正交集
+\begin_inset Formula $S$
+\end_inset
+
+中的元素都满足
+\begin_inset Formula $||e_{\alpha}||=1$
+\end_inset
+
+, 则称
+\begin_inset Formula $S$
+\end_inset
+
+为正交规范集;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Bessel不等式: 对内积空间
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $S=\{e_{\alpha}|\alpha\in A\}\subset X$
+\end_inset
+
+是正交规范集, 则
+\begin_inset Formula $\forall x\in X$
+\end_inset
+
+, 都有
+\begin_inset Formula $\sum\limits _{\alpha\in A}|<x,e_{\alpha}>|^{2}\le||x||^{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+设
+\begin_inset Formula $H$
+\end_inset
+
+是希尔伯特空间, 
+\begin_inset Formula $\{e_{\alpha}|\alpha\in A\}\subset H$
+\end_inset
+
+是正交规范子集, 
+\begin_inset Formula $x\in H$
+\end_inset
+
+, 则
+\begin_inset Formula $\sum\limits _{\alpha\in A}<x,e_{\alpha}>e_{\alpha}\in H$
+\end_inset
+
+, 且
+\begin_inset Formula $||x||^{2}=\sum\limits _{\alpha\in A}|<x,e_{\alpha}>|^{2}+||x-\sum\limits _{\alpha\in A}<x,e_{\alpha}>e_{\alpha}||^{2}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+设
+\begin_inset Formula $X$
+\end_inset
+
+是内积空间, 
+\begin_inset Formula $\{e_{\alpha},\alpha\in A\}=S\subset X$
+\end_inset
+
+是正交规范集:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+完备性: 若
+\begin_inset Formula $S^{\perp}=\{\theta\}$
+\end_inset
+
+, 则称
+\begin_inset Formula $S$
+\end_inset
+
+完备;
+\end_layout
+
+\begin_layout Enumerate
+Fourier系数: 若
+\begin_inset Formula $\forall x\in X$
+\end_inset
+
+, 都有
+\begin_inset Formula $x=\sum\limits _{\alpha\in A}<x,e_{\alpha}>e_{\alpha}$
+\end_inset
+
+, 则称
+\begin_inset Formula $S$
+\end_inset
+
+为一个基(或封闭), 称
+\begin_inset Formula $\{<x,e_{\alpha}>\}_{\alpha\in A}$
+\end_inset
+
+为
+\begin_inset Formula $x$
+\end_inset
+
+关于基
+\begin_inset Formula $S$
+\end_inset
+
+的Fourier系数;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+设
+\begin_inset Formula $H$
+\end_inset
+
+是希尔伯特空间, 
+\begin_inset Formula $S=\{e_{\alpha},\alpha\in A\}\subset H$
+\end_inset
+
+是正交规范集合, 则下面
+\begin_inset Formula $3$
+\end_inset
+
+点等价:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $S$
+\end_inset
+
+是基(或封闭);
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S$
+\end_inset
+
+是完备的;
+\end_layout
+
+\begin_layout Enumerate
+Bessel不等式退化为Parseval等式: 
+\begin_inset Formula $\forall x\in A,||x||^{2}=\sum\limits _{\alpha\in A}|<x,e_{\alpha}>|^{2}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+正交规范基存在: 设
+\begin_inset Formula $H$
+\end_inset
+
+是希尔伯特空间, 若
+\begin_inset Formula $H$
+\end_inset
+
+可分, 则
+\begin_inset Formula $H$
+\end_inset
+
+存在一个正交规范基
+\begin_inset Formula $S$
+\end_inset
+
+, 且
+\begin_inset Formula $S$
+\end_inset
+
+可数;
+\end_layout
+
+\begin_layout Enumerate
+Schmidt正交化过程:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $y_{1}=x_{1},e_{1}=\frac{y_{1}}{||y_{1}||}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $y_{2}=x_{2}-<x_{2},e_{1}>e_{1},e_{2}=\frac{y_{2}}{||y_{2}||}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $y_{n}=x_{n}-\sum\limits _{i=1}^{n-1}<x_{n},e_{i}>e_{i},e_{n}=\frac{y_{n}}{||y_{n}||}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+黎斯定理: 设
+\begin_inset Formula $H$
+\end_inset
+
+是希尔伯特空间, 
+\begin_inset Formula $H$
+\end_inset
+
+上任何有界线性泛函
+\begin_inset Formula $f:H\to K$
+\end_inset
+
+, 都可以表示为内积形式, 即
+\begin_inset Formula $\exists!z=z_{f}\in H,s.t.:\forall x\in H,f(x)=<x,z>$
+\end_inset
+
+, 且
+\begin_inset Formula $||f||=||z||$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+内积空间的元素相等: 设
+\begin_inset Formula $X$
+\end_inset
+
+是内积空间, 元素
+\begin_inset Formula $v_{1},v_{2}\in X$
+\end_inset
+
+, 若对
+\begin_inset Formula $\forall w\in X$
+\end_inset
+
+, 有
+\begin_inset Formula $<v_{1},\omega>=<v_{2},\omega>$
+\end_inset
+
+, 则
+\begin_inset Formula $v_{1}=v_{2}$
+\end_inset
+
+.
+ 特别的, 若对
+\begin_inset Formula $\forall w\in X$
+\end_inset
+
+, 有
+\begin_inset Formula $<v_{1},w>=0$
+\end_inset
+
+, 则
+\begin_inset Formula $w=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+Hahn-Banach定理: 设
+\begin_inset Formula $X$
+\end_inset
+
+是赋范空间, 子空间
+\begin_inset Formula $Z\subset X$
+\end_inset
+
+, 映射
+\begin_inset Formula $f:Z\to K$
+\end_inset
+
+是有界线性泛函, 则
+\begin_inset Formula $f$
+\end_inset
+
+的延拓
+\begin_inset Formula $\exists\tilde{f}:X\to K$
+\end_inset
+
+也是有界线性泛函, 并满足:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+延拓: 
+\begin_inset Formula $\tilde{f}(x)=f(x),\forall x\in Z$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+保范: 
+\begin_inset Formula $||\tilde{f}||=||f||$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+推论: 设
+\begin_inset Formula $X$
+\end_inset
+
+是赋范空间, 
+\begin_inset Formula $x_{0}\in X,x_{0}\neq\theta$
+\end_inset
+
+, 则
+\begin_inset Formula $\exists\tilde{f}:X\to K$
+\end_inset
+
+有界线性泛函, 使得
+\begin_inset Formula $\tilde{f}(x_{0})=||x_{0}||\neq0$
+\end_inset
+
+, 且
+\begin_inset Formula $||\tilde{f}||=1$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+注释: 赋范空间
+\begin_inset Formula $X$
+\end_inset
+
+上的有界线性泛函足够多.
+ 即若
+\begin_inset Formula $x_{1},x_{2}\in X,x_{1}\neq x_{2}$
+\end_inset
+
+, 则
+\begin_inset Formula $\exists\tilde{f}:X\to K$
+\end_inset
+
+有界线性泛函, 使得
+\begin_inset Formula $\tilde{f}(x_{1})\neq\tilde{f}(x_{2})$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+一致有界定理(共鸣定理): 设
+\begin_inset Formula $X$
+\end_inset
+
+是巴拿赫空间, 
+\begin_inset Formula $Y$
+\end_inset
+
+是一般赋范空间, 序列
+\begin_inset Formula $\{T_{n}\}_{n=1}^{\infty}:X\to Y$
+\end_inset
+
+中的算子都有界线性.
+ 若
+\begin_inset Formula $\forall x\in X$
+\end_inset
+
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\exists M_{x}>0$
+\end_inset
+
+, 使得
+\begin_inset Formula $||T_{n}x||\le M_{x},\forall n\in\mathbb{Z}^{+}$
+\end_inset
+
+, 则
+\begin_inset Formula $\exists M>0$
+\end_inset
+
+使得
+\begin_inset Formula $||T_{n}||\le M,\forall n\in\mathbb{Z}^{+}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+开映射: 设
+\begin_inset Formula $X,Y$
+\end_inset
+
+是度量空间, 映射
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+.
+ 若
+\begin_inset Formula $X$
+\end_inset
+
+中任意开集
+\begin_inset Formula $U$
+\end_inset
+
+, 它的象
+\begin_inset Formula $TU=\{Tx,x\in U\}$
+\end_inset
+
+是
+\begin_inset Formula $Y$
+\end_inset
+
+中的开集, 则称
+\begin_inset Formula $T$
+\end_inset
+
+是开映射;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+注意: 连续映射(
+\begin_inset Formula $Im\to Ker$
+\end_inset
+
+均是开集)
+\begin_inset Formula $\neq$
+\end_inset
+
+开映射(
+\begin_inset Formula $Ker\to Im$
+\end_inset
+
+均是开集);
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+开映射定理: 设
+\begin_inset Formula $X,Y$
+\end_inset
+
+是巴拿赫空间, 映射
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+是满射且为有界线性算子, 则
+\begin_inset Formula $T$
+\end_inset
+
+是开映射;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+进一步, 若
+\begin_inset Formula $T$
+\end_inset
+
+是双射且为有界线性算子, 则逆映射
+\begin_inset Formula $T^{-1}:Y\to X$
+\end_inset
+
+是连续线性算子;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+等价范数: 设
+\begin_inset Formula $X$
+\end_inset
+
+是线性空间, 范数
+\begin_inset Formula $||\cdot||_{1}$
+\end_inset
+
+和
+\begin_inset Formula $||\cdot||_{2}$
+\end_inset
+
+都是
+\begin_inset Formula $X$
+\end_inset
+
+上的范数, 且
+\begin_inset Formula $(X,||\cdot||_{1})$
+\end_inset
+
+和
+\begin_inset Formula $(X,||\cdot||_{2})$
+\end_inset
+
+都是完备的.
+ 若存在
+\begin_inset Formula $b>0$
+\end_inset
+
+, 使得
+\begin_inset Formula $||x||_{2}\le b||x||_{1},\forall x\in X$
+\end_inset
+
+, 则存在
+\begin_inset Formula $a>0$
+\end_inset
+
+, 使得
+\begin_inset Formula $||x||_{1}\le a||x||_{2},\forall x\in X$
+\end_inset
+
+.
+ 从而, 
+\begin_inset Formula $||x||_{1}$
+\end_inset
+
+与
+\begin_inset Formula $||x||_{2}$
+\end_inset
+
+是等价的;
+\end_layout
+
+\begin_layout Enumerate
+闭线性算子: 
+\begin_inset Formula $X,Y$
+\end_inset
+
+是赋范空间, 映射
+\begin_inset Formula $T:D(T)\subset X\to Y$
+\end_inset
+
+是线性算子, 乘积赋范空间
+\begin_inset Formula $(X\times Y,||\cdot||)$
+\end_inset
+
+中的元素
+\begin_inset Formula $(x,y)\in X\times Y$
+\end_inset
+
+, 乘积空间的范数
+\begin_inset Formula $||(x,y)||=||x||+||y||$
+\end_inset
+
+.
+ 若算子
+\begin_inset Formula $T$
+\end_inset
+
+的图
+\begin_inset Formula $G(T)=\{(x,y)\in X\times Y|x\in D(T),y=Tx\}$
+\end_inset
+
+在
+\begin_inset Formula $X\times Y$
+\end_inset
+
+中是闭集, 则称
+\begin_inset Formula $T$
+\end_inset
+
+为闭线性算子;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+注意: 对于线性算子, 闭算子
+\begin_inset Formula $\nRightarrow$
+\end_inset
+
+连续(有界);
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+闭图像定理: 设
+\begin_inset Formula $X,Y$
+\end_inset
+
+是巴拿赫空间, 线性算子
+\begin_inset Formula $T:D(T)\subset X\to Y$
+\end_inset
+
+.
+ 若
+\begin_inset Formula $D(T)$
+\end_inset
+
+是闭集, 且
+\begin_inset Formula $T$
+\end_inset
+
+是闭算子, 则
+\begin_inset Formula $T$
+\end_inset
+
+有界;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+闭算子条件: 
+\begin_inset Formula $T:D(T)\subset X\to Y$
+\end_inset
+
+有界线性, 且
+\begin_inset Formula $D(T)$
+\end_inset
+
+是闭集, 则
+\begin_inset Formula $T$
+\end_inset
+
+是闭算子;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+伴随算子: 设
+\begin_inset Formula $X,Y$
+\end_inset
+
+是赋范空间, 
+\begin_inset Formula $X$
+\end_inset
+
+的对偶空间
+\begin_inset Formula $X'=\{f:X\to K\texttt{有界线性泛函}\}$
+\end_inset
+
+, 
+\begin_inset Formula $Y$
+\end_inset
+
+的对偶空间
+\begin_inset Formula $Y'=\{g:Y\to K\texttt{有界线性泛函}\}$
+\end_inset
+
+, 有界线性算子
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+, 则可定义
+\begin_inset Formula $T^{*}:Y'\to X',g\to T^{*}g$
+\end_inset
+
+, 满足
+\begin_inset Formula $T^{*}g(x):=g(Tx)$
+\end_inset
+
+.
+ 称
+\begin_inset Formula $T^{*}$
+\end_inset
+
+为
+\begin_inset Formula $T$
+\end_inset
+
+的伴随算子;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+伴随算子
+\begin_inset Formula $T^{*}$
+\end_inset
+
+是线性有界算子, 且
+\begin_inset Formula $||T^{*}||=||T||$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+二次对偶空间: 设
+\begin_inset Formula $(X,||\cdot||)$
+\end_inset
+
+是赋范空间, 对偶空间
+\begin_inset Formula $X'=\{f:X\to K\texttt{有界线性泛函}\}$
+\end_inset
+
+, 算子
+\begin_inset Formula $f\in X'$
+\end_inset
+
+的范数
+\begin_inset Formula $||f||=\sup\limits _{x\in X,x\neq\theta}\frac{|f(x)|}{||x||}$
+\end_inset
+
+, 则
+\begin_inset Formula $(X',||\cdot||)$
+\end_inset
+
+也是赋范空间.
+ 
+\begin_inset Formula $X'$
+\end_inset
+
+的对偶空间
+\begin_inset Formula $(X')'=\{g:X'\to K\texttt{有界线性泛函}\}$
+\end_inset
+
+, 再对算子
+\begin_inset Formula $g\in(X')'$
+\end_inset
+
+定义范数
+\begin_inset Formula $||g||=\sup\limits _{f\in X',f\neq\theta}\frac{|g(f)|}{||f||}$
+\end_inset
+
+得到赋范空间
+\begin_inset Formula $((X')',||\cdot||)$
+\end_inset
+
+.
+ 称
+\begin_inset Formula $(X')'$
+\end_inset
+
+为
+\begin_inset Formula $X$
+\end_inset
+
+的二次对偶空间, 记作
+\begin_inset Formula $X''$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+赋范空间
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $x\in X$
+\end_inset
+
+, 定义
+\begin_inset Formula $g_{x}:X'\to K,f\to g_{x}(f)=f(x)$
+\end_inset
+
+, 则
+\begin_inset Formula $g_{x}\in X''$
+\end_inset
+
+是有界线性泛函, 且
+\begin_inset Formula $||g_{x}||=||x||$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+弱收敛: 在赋范空间
+\begin_inset Formula $X$
+\end_inset
+
+中, 有序列
+\begin_inset Formula $\{x_{n}\}\subset X$
+\end_inset
+
+, 若有界线性泛函
+\begin_inset Formula $\forall f\in X',f(x_{n})\to f(x)$
+\end_inset
+
+, 则称序列弱收敛, 记为
+\begin_inset Formula $x_{n}\to^{\omega}x\in X$
+\end_inset
+
+(手写时
+\begin_inset Formula $\omega$
+\end_inset
+
+记在
+\begin_inset Formula $\to$
+\end_inset
+
+上方);
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+弱收敛的极限唯一;
+\end_layout
+
+\begin_layout Enumerate
+弱收敛序列的任意子序列也是弱收敛;
+\end_layout
+
+\begin_layout Enumerate
+弱收敛序列一定是有界的, 即
+\begin_inset Formula $||x_{n}||\le M,\forall n$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+强弱收敛的关系: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+在赋范空间
+\begin_inset Formula $X$
+\end_inset
+
+中, 序列
+\begin_inset Formula $\{x_{n}\}\subset X$
+\end_inset
+
+, 若序列强收敛
+\begin_inset Formula $x_{n}\to x$
+\end_inset
+
+, 则序列弱收敛
+\begin_inset Formula $x_{n}\to^{\omega}x$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+在赋范空间
+\begin_inset Formula $X$
+\end_inset
+
+中, 若维数
+\begin_inset Formula $\dim X=K<+\infty$
+\end_inset
+
+有限, 则弱收敛可推出强收敛;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+在希尔伯特空间
+\begin_inset Formula $H$
+\end_inset
+
+中, 序列
+\begin_inset Formula $x_{n}\to^{\omega}x$
+\end_inset
+
+当且仅当
+\begin_inset Formula $\forall z\in H$
+\end_inset
+
+都有
+\begin_inset Formula $<x_{n},z>\to<x,z>$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Section
+实变函数
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sigma-$
+\end_inset
+
+代数与可测: 设
+\begin_inset Formula $X=\mathbb{R}^{n}$
+\end_inset
+
+, 集类
+\begin_inset Formula $\Sigma=\{E\subset\mathbb{R}^{n}\}$
+\end_inset
+
+满足下面的三个性质, 则称
+\begin_inset Formula $\Sigma$
+\end_inset
+
+为一个
+\begin_inset Formula $\sigma-$
+\end_inset
+
+代数, 称
+\begin_inset Formula $(\mathbb{R}^{n},\Sigma)$
+\end_inset
+
+为可测空间, 称
+\begin_inset Formula $E\in\Sigma$
+\end_inset
+
+为可测集:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+平庸封闭: 
+\begin_inset Formula $\phi,\mathbb{R}^{n}\subset\Sigma$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+余运算封闭: 若
+\begin_inset Formula $E\in\Sigma$
+\end_inset
+
+, 则
+\begin_inset Formula $E^{c}=\mathbb{R}^{n}\backslash E\in\Sigma$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+可列并封闭: 若
+\begin_inset Formula $E_{i}\in\Sigma,i\in\mathbb{N}$
+\end_inset
+
+, 则
+\begin_inset Formula $\cup{}_{i=1}^{\infty}E_{i}\in\Sigma$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+(或)可列交封闭: 若
+\begin_inset Formula $E_{i}\in\Sigma$
+\end_inset
+
+, 
+\begin_inset Formula $i\in\mathbb{N}$
+\end_inset
+
+, 则
+\begin_inset Formula $\cap_{i=0}^{\infty}E_{i}\in\Sigma$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+不等号定义: 设
+\begin_inset Formula $X=\mathbb{R}^{n}$
+\end_inset
+
+, 
+\begin_inset Formula $a=(a_{1},...,a_{n})^{T},b=(b_{1},...,b_{n})^{T}\in\mathbb{R}^{n}$
+\end_inset
+
+, 若
+\begin_inset Formula $a_{i}\le b_{i},1\le i\le n$
+\end_inset
+
+, 则称
+\begin_inset Formula $a\le b$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+半开半闭区间: 
+\begin_inset Formula $(a,b]=\{x\in\mathbb{R}^{n},a_{i}<x\le b_{i},1\le i\le n\}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+测度: 对集类
+\begin_inset Formula $\mathfrak{C}=\{(a,b],a,b\in\mathbb{R}^{n},a<b\}$
+\end_inset
+
+, 定义测度
+\begin_inset Formula $m:\mathfrak{C}\to[0,+\infty]((a,b]\to m(a,b])$
+\end_inset
+
+, 
+\begin_inset Formula $m(a,b]=\prod\limits _{i=1}^{n}(b_{i}-a_{i})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+集类生成的
+\begin_inset Formula $\sigma-$
+\end_inset
+
+代数: 设
+\begin_inset Formula $X=\mathbb{R}^{n}$
+\end_inset
+
+, 集类
+\begin_inset Formula $\mathfrak{C}=\{(a,b]\}$
+\end_inset
+
+, 则
+\begin_inset Formula $\exists!\sigma-$
+\end_inset
+
+代数
+\begin_inset Formula $\sigma(\mathfrak{C})$
+\end_inset
+
+使得
+\begin_inset Formula $\mathfrak{C}\subset\sigma(\mathfrak{C})$
+\end_inset
+
+, 且若还有一个
+\begin_inset Formula $\sigma-$
+\end_inset
+
+代数
+\begin_inset Formula $\Sigma$
+\end_inset
+
+满足
+\begin_inset Formula $\mathfrak{C}\subset\Sigma$
+\end_inset
+
+, 则
+\begin_inset Formula $\sigma(\mathfrak{C})\subset\Sigma$
+\end_inset
+
+.
+ 称
+\begin_inset Formula $\sigma(\mathfrak{C})$
+\end_inset
+
+为由
+\begin_inset Formula $\mathfrak{C}$
+\end_inset
+
+生成的
+\begin_inset Formula $\sigma-$
+\end_inset
+
+代数;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Borel 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+代数: 
+\begin_inset Formula $\sigma(\mathfrak{C})=\beta$
+\end_inset
+
+.
+ 可测空间
+\begin_inset Formula $(\mathbb{R}^{n},\beta)$
+\end_inset
+
+称为Borel可测空间, 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+上的子集
+\begin_inset Formula $B\in\beta$
+\end_inset
+
+作为
+\begin_inset Formula $\beta$
+\end_inset
+
+的元素被称为Borel可测集;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\beta=\sigma(\{(a,b]\})=\sigma(\{(a,b)\})=\sigma(\{[a,b]\})=\sigma(\{\texttt{开集}\})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+子集
+\begin_inset Formula $B$
+\end_inset
+
+的测度: 
+\begin_inset Formula $m(B)=\inf\{\sum\limits _{n=1}^{\infty}m(I_{n}),B\subset\cup_{n=1}^{\infty}\}$
+\end_inset
+
+, 其中
+\begin_inset Formula $I_{n}$
+\end_inset
+
+为半开半闭区间;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Borel测度空间: 装配了测度
+\begin_inset Formula $m$
+\end_inset
+
+的Borel可测空间
+\begin_inset Formula $(\mathbb{R}^{n},\beta,m)$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $m(\phi)=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+可列可加性: 若可列个Borel可测集
+\begin_inset Formula $B_{i}\in\beta,i\in\mathbb{N}$
+\end_inset
+
+, 且它们两两不交
+\begin_inset Formula $B_{i}\cap B_{j}=\phi$
+\end_inset
+
+, 则
+\begin_inset Formula $m(\cup_{i=1}^{\infty}B_{i})=\sum\limits _{i=1}^{\infty}m(B_{i})$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Lebesgue 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+代数: 称
+\begin_inset Formula $\bar{\beta}=\mu=\sigma(\{z\subset B|B\in\beta,m(B)=0\}\cup\beta)$
+\end_inset
+
+即全部零测度集的全体子集为Lebesgue 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+代数, 称
+\begin_inset Formula $E\in\bar{\beta}$
+\end_inset
+
+为Lebesgue可测集;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+测度的性质:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+可数集
+\begin_inset Formula $E=\{x_{i},i\in\mathbb{N}\}\in\mu,m(E)=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\{x_{0}\}\in\mu,m(\{x_{0}\})=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+次可加性: 
+\begin_inset Formula $m(\cup_{i=1}^{\infty}E_{i})\le\sum\limits _{i=1}^{\infty}(E_{i})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+下连续性: 若
+\begin_inset Formula $\{E_{i}\}_{i=1}^{\infty}\subset\mu,E_{1}\subset E_{2}\subset...\subset E_{i}\subset...$
+\end_inset
+
+, 则
+\begin_inset Formula $m(\cup_{i=1}^{\infty}E_{i})=m(\lim\limits _{i\to\infty}E_{i})=\lim\limits _{i\to\infty}m(E_{i})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+上连续性: 若
+\begin_inset Formula $\{E_{i}\}_{i=1}^{\infty}\subset\mu,...\subset E_{i}\subset...\subset E_{2}\subset E_{1}$
+\end_inset
+
+, 且
+\begin_inset Formula $m(E_{1})<+\infty$
+\end_inset
+
+, 则
+\begin_inset Formula $m(\cap_{i=1}^{\infty}E_{i})=m(\lim\limits _{i\to\infty}E_{i})=\lim\limits _{i\to\infty}m(E_{i})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+若
+\begin_inset Formula $E\subset\mu,x_{0}\in\mathbb{R}^{n},E+x_{0}=\{x+x_{0},x\in E\}$
+\end_inset
+
+, 则
+\begin_inset Formula $m(E)=m(E+x_{0})$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+可测函数: 函数
+\begin_inset Formula $f:(\mathbb{R}^{n},\mu)\to(\mathbb{R},\beta)$
+\end_inset
+
+, 若
+\begin_inset Formula $\forall B\subset\mathbb{R}$
+\end_inset
+
+(Borel可测集)有
+\begin_inset Formula $f^{-1}(B)\subset\mathbb{R}^{n}$
+\end_inset
+
+(Lebesgue可测集), 则称
+\begin_inset Formula $f$
+\end_inset
+
+为可测函数;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+设函数
+\begin_inset Formula $f:E\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $E\in\mu$
+\end_inset
+
+(Lebesgue可测集), 若
+\begin_inset Formula $\forall B\subset\mathbb{R}$
+\end_inset
+
+(Borel可测集), 有
+\begin_inset Formula $f^{-1}(B)\subset\mathbb{R}^{n}$
+\end_inset
+
+是Lebesgue可测集, 则称
+\begin_inset Formula $f$
+\end_inset
+
+是
+\begin_inset Formula $E$
+\end_inset
+
+上的可测函数;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $f:E\to\mathbb{R}$
+\end_inset
+
+是可测函数 
+\begin_inset Formula $\Leftrightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\forall t\in\mathbb{R},f^{-1}(t,+\infty)$
+\end_inset
+
+(或
+\begin_inset Formula $f^{-1}[t,+\infty),f^{-1}(-\infty,t),f^{-1}(-\infty,t],f^{-1}(a,b),\forall a,b\in\mathbb{R}$
+\end_inset
+
+)是Lebesgue可测集;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+几乎处处: 
+\begin_inset Formula $a.e.$
+\end_inset
+
+表示几乎处处, 即除去零测集
+\begin_inset Formula $m(\{x\in E:f_{k}(x)\nrightarrow f(x)\})=0$
+\end_inset
+
+外的部分;
+\end_layout
+
+\begin_layout Enumerate
+控制收敛定理: 设
+\begin_inset Formula $\{f_{k}(x)\}_{k=1}^{\infty}:E\subset\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $f_{k}(x)\in L(E),k\in\mathbb{N}$
+\end_inset
+
+即Lebesgue可积, 且
+\begin_inset Formula $\lim\limits _{k\to+\infty}f_{k}(x)\to f(x),a.e.x\in E$
+\end_inset
+
+, 存在
+\begin_inset Formula $F(x)\in L(E)$
+\end_inset
+
+使得
+\begin_inset Formula $|f_{k}(x)|\le F(x),a.e.x\in E,\forall k\in\mathbb{N}$
+\end_inset
+
+, 则
+\begin_inset Formula $\lim\limits _{k\to+\infty}\int_{E}f_{k}(x)dx=\int_{E}\lim\limits _{k\to+\infty}f_{k}(x)dx=\int_{E}f(x)dx$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+函数
+\begin_inset Formula $f,g:E\subset\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+可测, 若
+\begin_inset Formula $f(x)=g(x),a.e.x\in E$
+\end_inset
+
+, 则
+\begin_inset Formula $\int_{E}f(x)dx=\int_{E}g(x)dx$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+设
+\begin_inset Formula $E\subset\mathbb{R}^{n}$
+\end_inset
+
+是Lebesgue可测集, 函数
+\begin_inset Formula $f:E\to\mathbb{R}$
+\end_inset
+
+是可测函数, 等价类
+\begin_inset Formula $[f]=\{g:E\to\mathbb{R}\texttt{是可测函数},g(x)=f(x),a.e.x\in E\}$
+\end_inset
+
+, 代表元
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $f\in[f]$
+\end_inset
+
+, 对任意
+\begin_inset Formula $f_{1},f_{2}\in[f]$
+\end_inset
+
+, 有
+\begin_inset Formula $\int_{E}f_{1}(x)dx=\int_{E}f_{2}(x)dx$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $L^{P}$
+\end_inset
+
+空间: 给定
+\begin_inset Formula $1\le P<+\infty$
+\end_inset
+
+, 
+\begin_inset Formula $L^{P}(E):=\{[f]:\quad f:E\nrightarrow\mathbb{R}\texttt{是可测函数},\int_{E}|f(x)|^{P}dx<+\infty\}$
+\end_inset
+
+.
+ 当
+\begin_inset Formula $P=+\infty$
+\end_inset
+
+时, 
+\begin_inset Formula $L^{\infty}(E)=\{[f]:\quad f:E\to\mathbb{R}\texttt{是可测函数},\inf\limits _{z\subset E,m(z)=0}\left(\sup\limits _{E\backslash Z}|f(x)|\right)<+\infty\}$
+\end_inset
+
+.
+ 有时可以用代表元
+\begin_inset Formula $f$
+\end_inset
+
+代替等价类
+\begin_inset Formula $[f]$
+\end_inset
+
+, 而省略
+\begin_inset Formula $[f]$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $L^{P}$
+\end_inset
+
+赋范空间: 当
+\begin_inset Formula $1\le P<+\infty$
+\end_inset
+
+, 
+\begin_inset Formula $X=L^{P}(E)$
+\end_inset
+
+, 
+\begin_inset Formula $||\cdot||_{P}:L^{P}(E)\to\mathbb{R}(f\to||f||_{P})$
+\end_inset
+
+, 
+\begin_inset Formula $||f||_{P}=\left(\int_{E}|f(x)|^{P}dx\right)^{\frac{1}{P}}<+\infty$
+\end_inset
+
+.
+ 当
+\begin_inset Formula $P=+\infty$
+\end_inset
+
+, 
+\begin_inset Formula $||\cdot||:L^{\infty}(E)\to\mathbb{R}(f\to||f||_{\infty})$
+\end_inset
+
+, 
+\begin_inset Formula $||f||_{\infty}=\inf\limits _{m(z)=0,z\subset E}\left(\sup\limits _{E\backslash Z}|f(x)|\right)<+\infty$
+\end_inset
+
+.
+ 则
+\begin_inset Formula $(L^{P},||\cdot||_{P})$
+\end_inset
+
+是赋范空间;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $L^{P}(E),1\le P\le+\infty$
+\end_inset
+
+是完备赋范空间(巴拿赫空间);
+\end_layout
+
+\begin_layout Enumerate
+当
+\begin_inset Formula $1\le P<+\infty$
+\end_inset
+
+时, 
+\begin_inset Formula $L^{P}(E)$
+\end_inset
+
+是可分空间; 当
+\begin_inset Formula $P=+\infty$
+\end_inset
+
+时, 
+\begin_inset Formula $L^{P}(E)$
+\end_inset
+
+是不可分空间;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $L^{P}$
+\end_inset
+
+线性空间: 空间
+\begin_inset Formula $X=L^{P}(E),1\le P\le+\infty$
+\end_inset
+
+, 数域
+\begin_inset Formula $K=\mathbb{R}$
+\end_inset
+
+, 加法
+\begin_inset Formula $+:X\times X\to X((f,g)\to f+g,(f+g)(x)=f(x)+g(x),\forall x\in E)$
+\end_inset
+
+, 数乘
+\begin_inset Formula $\cdot:K\times X\to X((\alpha,f)\to\alpha f,(\alpha f)(x)=\alpha f(x),\forall x\in E)$
+\end_inset
+
+, 则
+\begin_inset Formula $(L^{P}(R),\mathbb{R},+,\cdot)$
+\end_inset
+
+是线性空间;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Holder不等式: 若
+\begin_inset Formula $f\in L^{P}(E),g\in L^{q}(E),\frac{1}{p}+\frac{1}{q}=1$
+\end_inset
+
+, 则
+\begin_inset Formula $\int_{E}|f(x)g(x)|dx\le\left(\int_{E}|f(x)|^{p}dx\right)^{\frac{1}{p}}\left(\int_{E}|g(x)|^{q}dx\right)^{\frac{1}{q}}$
+\end_inset
+
+.
+ 即
+\begin_inset Formula $||fg||_{1}\le||f||_{p}||g||_{q}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+当
+\begin_inset Formula $p=q=2$
+\end_inset
+
+时, Holder不等式退化为柯西-许瓦兹不等式;
+\end_layout
+
+\begin_layout Enumerate
+当
+\begin_inset Formula $m(E)<+\infty,1\le P_{1}<P_{2}<+\infty$
+\end_inset
+
+, 有
+\begin_inset Formula $L^{P_{2}}(E)\subset L^{P_{1}}(E)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+勒让德多项式: 在
+\begin_inset Formula $L^{2}$
+\end_inset
+
+上的基
+\begin_inset Formula $\{1,t,t^{2},...,t^{n},...\}$
+\end_inset
+
+经过施密特正交化后得到的正交规范基;
+\end_layout
+
+\end_body
+\end_document
