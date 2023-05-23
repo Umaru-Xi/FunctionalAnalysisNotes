@@ -95,7 +95,7 @@
 \end_layout
 
 \begin_layout Enumerate
-时变函数论, 周民强; 
+实变函数论, 周民强; 
 \end_layout
 
 \end_deeper
@@ -125,6 +125,7 @@
 
 \begin_deeper
 \begin_layout Enumerate
+正定性: 
 \begin_inset Formula $\forall x,y\in X,d(x,y)\ge0$
 \end_inset
 
@@ -132,6 +133,7 @@
 \end_layout
 
 \begin_layout Enumerate
+对称性: 
 \begin_inset Formula $\forall x,y\in X$
 \end_inset
 
@@ -143,6 +145,7 @@
 \end_layout
 
 \begin_layout Enumerate
+三角不等式: 
 \begin_inset Formula $\forall x,y,z\in X,d(x,z)\le d(x,y)+d(y,z)$
 \end_inset
 
@@ -491,7 +494,7 @@
 \end_inset
 
 为可列集, 则
-\begin_inset Formula $A=\cup_{n=1}^{\infty}A_{n}$
+\begin_inset Formula $A=\bigcup\limits_{n=1}^{\infty}A_{n}$
 \end_inset
 
 为可列集;
@@ -597,7 +600,7 @@
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula $d_{max}(f,g)=\max_{a\le t\le b}|f(t)-g(t)|$
+\begin_inset Formula $d_{max}(f,g)=\max\limits_{a\le t\le b}|f(t)-g(t)|$
 \end_inset
 
 
@@ -622,7 +625,7 @@
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula $l^{\infty}=\{(x_{i})|i\in\mathbb{N},\sup_{i\in\mathbb{N}}|x_{i}|<\infty\}$
+\begin_inset Formula $l^{\infty}=\{(x_{i})|i\in\mathbb{N},\sup\limits_{i\in\mathbb{N}}|x_{i}|<\infty\}$
 \end_inset
 
 
@@ -659,13 +662,297 @@
 是有界的;
 \end_layout
 
+\begin_layout Quote
+证: 
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $\forall x,y\in X,\tilde{d}(x,y)$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+上的一个度量:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+正定性: 
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because d$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+上的一个度量;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore d(x,y)\ge0$
+\end_inset
+
+且
+\begin_inset Formula $1+d(x,y)\ge1,\forall x,y\in X$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\tilde{d}(x,y)=\frac{d(x,y)}{1+d(x,y)}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{\tilde{d}(x,y)\ge0}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+对称性:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because d(x,y)=d(y,x),\forall x,y\in X$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{\tilde{d}(y,x)=\frac{d(y,x)}{1+d(y,x)}=\frac{d(x,y)}{1+d(x,y)}=\tilde{d}(x,y)}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+三角不等式:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+若
+\begin_inset Formula $\tilde{d}(x,y)$
+\end_inset
+
+满足
+\begin_inset Formula $\tilde{d}(x,z)\le\tilde{d}(x,y)+\tilde{d}(y,z),\forall x,y,z\in X$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+则必然有
+\begin_inset Formula $\tilde{d}(x,z)-\tilde{d}(y,z)\le\tilde{d}(x,y)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because d(x,z)\le d(x,y)+d(y,z)\Leftrightarrow d(x,z)-d(y,z)\le d(x,y)$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\tilde{d}(x,z)-\tilde{d}(y,z)=\frac{d(x,z)-d(y,z)}{1+d(x,z)+d(y,z)+d(x,z)d(y,z)}$
+\end_inset
+
+
+\begin_inset Formula $\le\frac{d(x,y)}{1+d(x,z)+d(y,z)+d(x,z)d(y,z)}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because d(x,z)+d(y,z)\ge d(x,y)$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\tilde{d}(x,z)-\tilde{d}(y,z)\le\frac{d(x,y)}{1+d(x,y)+d(x,z)d(y,z)}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because d(x,z)\ge0,d(y,z)\ge0\Rightarrow d(x,z)d(y,z)\ge0$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\tilde{d}(x,z)-\tilde{(y,z)}\le\frac{d(x,y)}{1+d(x,y)}=\tilde{d}(x,y)$
+\end_inset
+
+, 即
+\begin_inset Formula $\underline{\tilde{d}(x,z)\le\tilde{d}(x,y)+\tilde{d}(y,z)}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+综上, 
+\begin_inset Formula $\underline{\tilde{d}(x,y)\texttt{是X上的一个度量}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+证明在度量
+\begin_inset Formula $\tilde{d}(x,y)$
+\end_inset
+
+下
+\begin_inset Formula $X$
+\end_inset
+
+是有界的:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+由
+\begin_inset Formula $\tilde{d}(x,y)=\frac{d(x,y)}{1+d(x,y)}$
+\end_inset
+
+且
+\begin_inset Formula $d(x,y)\ge0$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+定义
+\begin_inset Formula $\tilde{d}$
+\end_inset
+
+关于
+\begin_inset Formula $d$
+\end_inset
+
+的函数
+\begin_inset Formula $\tilde{d}(d)=\frac{d}{1+d},d\ge0$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\tilde{d}(d)=\frac{d}{1+d},d\ge0$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\tilde{d}'(d)=\frac{1}{(1+d)^{2}}\ge0$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because0<\tilde{d}'(d)\le1$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\tilde{d}_{max}(d)=\lim\limits _{d\to+\infty}\frac{d}{1+d}=1$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\max\limits _{d\ge0}\tilde{d}(d)=\sup\limits _{x\in X,y\in X}\tilde{d}(x,y)=1$
+\end_inset
+
+(在下一章中可引入
+\begin_inset Formula $\tilde{d}(X)=1<+\infty$
+\end_inset
+
+);
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{X\texttt{在度量\tilde{d}下有界}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证毕.
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Section
 映射(作业: 20230227)与巴拿赫不动点定理(作业: 20230309)
 \end_layout
 
 \begin_layout Enumerate
-连续: 有度量空间
+连续: 设度量空间
 \begin_inset Formula $(X,d_{X})$
 \end_inset
 
@@ -748,7 +1035,7 @@
 \begin_deeper
 \begin_layout Enumerate
 若开集
-\begin_inset Formula $V,\forall V\subset C:TV=\{y\in Y|\exists x\in V,Tx=y\}$
+\begin_inset Formula $V,\forall V\subset X:TV=\{y\in Y|\exists x\in V,Tx=y\}$
 \end_inset
 
 , 其像
@@ -808,7 +1095,7 @@
 \end_inset
 
 , 直径
-\begin_inset Formula $d(M)=\sup\limits _{x\in M,y\in M}d(d,y)$
+\begin_inset Formula $d(M)=\sup\limits _{x\in M,y\in M}d(x,y)$
 \end_inset
 
 ;
@@ -1085,7 +1372,7 @@
 \end_inset
 
 中稠密(
-\begin_inset Formula $\bar{M}=\hat{X}$
+\begin_inset Formula $\bar{W}=\hat{X}$
 \end_inset
 
 )且
@@ -1253,6 +1540,160 @@ x(t_{0})=x_{0}
 中的闭集时才是连续的;
 \end_layout
 
+\begin_layout Quote
+证: 
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+证明充分性: 
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because M\subset Y$
+\end_inset
+
+是闭集;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore M^{c}\subset Y$
+\end_inset
+
+是开集;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because M\subset Y$
+\end_inset
+
+在映射
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+的逆象
+\begin_inset Formula $T^{-1}M$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的闭集;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore T^{-1}M^{c}=(T^{-1}M)^{c}\subset X$
+\end_inset
+
+是开集;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because T^{-1}M\subset X$
+\end_inset
+
+与
+\begin_inset Formula $M\subset Y$
+\end_inset
+
+都是开集;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{\texttt{映射}T\texttt{连续}};$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明必要性:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because$
+\end_inset
+
+映射
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+连续;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\forall W\subset Y$
+\end_inset
+
+是开集, 有
+\begin_inset Formula $T^{-1}W\subset X$
+\end_inset
+
+是开集;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because W\subset Y$
+\end_inset
+
+是开集;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore W^{c}\subset Y$
+\end_inset
+
+是闭集, 
+\begin_inset Formula $T^{-1}W^{c}=(T^{-1}W)^{c}\subset X$
+\end_inset
+
+也是闭集;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+设
+\begin_inset Formula $M=W^{c}\subset Y$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+有
+\begin_inset Formula $\underline{T^{-1}M\texttt{是闭集}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+综上, 原命题成立.
+ 证毕.
+ 
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 作业: 20230309
@@ -1287,9 +1728,160 @@ x(t_{0})=x_{0}
 ;
 \end_layout
 
+\begin_layout Quote
+证:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+的每一个子序列
+\begin_inset Formula $(x_{n_{k}})$
+\end_inset
+
+都收敛:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\{x_{n}\}$
+\end_inset
+
+在
+\begin_inset Formula $X$
+\end_inset
+
+中收敛于
+\begin_inset Formula $x$
+\end_inset
+
+, 设
+\begin_inset Formula $X$
+\end_inset
+
+中装配的度量是
+\begin_inset Formula $d$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\forall\varepsilon>0,\exists N=N(\varepsilon),s.t.:d(x_{n},x)<\varepsilon,(n\ge N)$
+\end_inset
+
+(或记为
+\begin_inset Formula $x_{n}\in B(x,\varepsilon)$
+\end_inset
+
+);
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\forall\{x_{n}'\}\subset\{x_{n}\}$
+\end_inset
+
+是
+\begin_inset Formula $\{x_{n}\}$
+\end_inset
+
+的子序列, 
+\begin_inset Formula $d(x_{n}',x)<\varepsilon,n\ge N$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{\{x_{n}'\}\texttt{收敛}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $(x_{n}')$
+\end_inset
+
+与
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+收敛于同一个极限
+\begin_inset Formula $x$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because d(x_{n}',x)<\varepsilon,n\ge N$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\lim\limits _{n\to+\infty}d(x_{n}',x)=0$
+\end_inset
+
+, 即
+\begin_inset Formula $\{x_{n}'\}$
+\end_inset
+
+的极限是
+\begin_inset Formula $x$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\{x_{n}\}$
+\end_inset
+
+的极限是
+\begin_inset Formula $x$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{\{x_{n}'\}\texttt{与}\{x_{n}\}\texttt{有同样的极限}x}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证毕.
+ 
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Section
-赋范空间(作业: 20230317)与线性算子(作业20230425)
+赋范空间(作业: 20230317)与线性算子(作业: 20230425)
 \end_layout
 
 \begin_layout Enumerate
@@ -3358,7 +3950,7 @@ Schauder基: 若赋范空间
 , 按
 \begin_inset Formula $\begin{cases}
 (x_{1},x_{2})+(y_{1},y_{2})=(x_{1}+y_{1},x_{2}+y_{2})\\
-\alpha(x_{1},x_{2})=(\alpha x_{1},\alpha x_{2})
+\alpha(x_{1},x_{2})=(\alpha x_{1},\alpha x_{2}),\forall\alpha\in K
 \end{cases}$
 \end_inset
 
@@ -3369,6 +3961,519 @@ Schauder基: 若赋范空间
 成为一个矢量空间;
 \end_layout
 
+\begin_layout Quote
+证:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $X$
+\end_inset
+
+中存在零元:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because X_{1}X_{2}$
+\end_inset
+
+是线性空间;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\exists!\theta_{1}\in X_{1},\exists!\theta_{2}\in X_{2}$
+\end_inset
+
+分别是
+\begin_inset Formula $X_{1}$
+\end_inset
+
+与
+\begin_inset Formula $X_{2}$
+\end_inset
+
+中的零元;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\forall x_{1},y_{1}\in X_{1},\forall x_{2},y_{2}\in X_{2},$
+\end_inset
+
+
+\begin_inset Formula $(x_{1},x_{2})+(y_{1},y_{2})=(x_{1}+y_{1},x_{2}+y_{2})$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore(x_{1},x_{2})+(\theta_{1},\theta_{2})$
+\end_inset
+
+
+\begin_inset Formula $=(x_{1}+\theta_{1},x_{2}+\theta_{2})$
+\end_inset
+
+
+\begin_inset Formula $=(x_{1},x_{2})$
+\end_inset
+
+, 即
+\begin_inset Formula $\underline{X\texttt{中存在零元}\theta=(\theta_{1},\theta_{2})}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $X$
+\end_inset
+
+中的零元唯一:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+反设
+\begin_inset Formula $(\theta_{1}',\theta_{2}')$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的零元, 且
+\begin_inset Formula $(\theta_{1}',\theta_{2}')\neq(\theta_{1},\theta_{2})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Quote
+\begin_inset Formula $\because(\theta_{1},\theta_{2})$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的零元;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore(\theta_{1},\theta_{2})+(\theta_{1}',\theta_{2}')=(\theta_{1}',\theta_{2}')$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because(\theta_{1}',\theta_{2}')$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的零元;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore(\theta_{1},\theta_{2})+(\theta_{1}',\theta_{2}')=(\theta_{1},\theta_{2})$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because(\theta_{1},\theta_{2})=(\theta_{1}',\theta_{2}')$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{\texttt{矛盾,}X\texttt{中的零元唯一}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $X$
+\end_inset
+
+中的元素存在逆元:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because x_{1},x_{2}$
+\end_inset
+
+在
+\begin_inset Formula $X_{1},X_{2}$
+\end_inset
+
+中分别有唯一的逆元
+\begin_inset Formula $x_{1}',x_{2}'$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore x_{1}+x_{1}'=\theta_{1},x_{2}+x_{2}'=\theta_{2}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because(x_{1},x_{2})+(x_{1}',x_{2}')=(\theta_{1},\theta_{2})$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{X\text{中的任意元素}(x_{1},x_{2})\texttt{存在逆元}x'=(x_{1}',x_{2}')}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $X$
+\end_inset
+
+中元素的逆元唯一:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+反设
+\begin_inset Formula $\forall(x_{1},x_{2})\in X$
+\end_inset
+
+有逆元
+\begin_inset Formula $(x_{1}'',x_{2}'')$
+\end_inset
+
+, 且
+\begin_inset Formula $(x_{1}'',x_{2}'')\neq(x_{1}',x_{2}')$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Quote
+\begin_inset Formula $\because(x_{1}'',x_{2}'')$
+\end_inset
+
+是
+\begin_inset Formula $(x_{1},x_{2})$
+\end_inset
+
+的逆元;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore[(x_{1}'',x_{2}'')+(x_{1},x_{2})]+(x_{1}',x_{2}')$
+\end_inset
+
+
+\begin_inset Formula $=(\theta_{1},\theta_{2})+(x_{1}',x_{2}')$
+\end_inset
+
+
+\begin_inset Formula $=(x_{1}',x_{2}')$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because$
+\end_inset
+
+加法具有结合律;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore[(x_{1}'',x_{2}'')+(x_{1},x_{2})]+(x_{1}',x_{2}')$
+\end_inset
+
+
+\begin_inset Formula $=(x_{1}'',x_{2}'')+[(x_{1},x_{2})+(x_{1}'.x_{2}')]$
+\end_inset
+
+
+\begin_inset Formula $=(x_{1}'',x_{2}'')$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because(x_{1}',x_{2}')=(x_{1}'',x_{2}'')$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{\texttt{矛盾,}X\texttt{中元素的逆元唯一}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $\forall x=(x_{1},x_{2})\in X=X_{1}\times X_{2},0\cdot x=\theta$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because x_{1}\in X_{1},x_{2}\in X_{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore0\cdot x_{1}=\theta_{1},0\cdot x_{2}=\theta_{2}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\forall\alpha\in K,\alpha\cdot(x_{1},x_{2})=(\alpha\cdot x_{1},\alpha\cdot x_{2})$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{0\cdot x=0\cdot(x_{1},x_{2})=(\theta_{1},\theta_{2})=\theta}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $-1\cdot x=x'$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because-1\cdot x_{1}=x_{1}',-1\cdot x_{2}=x_{2}'$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{-1\cdot x=-1\cdot(x_{1},x_{2})=(x_{1}',x_{2}')=x'}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $\forall\alpha\in K,\alpha\cdot\theta=\theta$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\alpha\cdot\theta_{1}=\theta_{1},\alpha\cdot\theta_{2}=\theta_{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{\alpha\cdot\theta=\alpha\cdot(\theta_{1},\theta_{2})=(\theta_{1},\theta_{2})=\theta}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+综上, 
+\begin_inset Formula $X$
+\end_inset
+
+是线性空间.
+ 证毕.
+ 
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+证明若空间有邵德尔基, 则它是可分空间;
+\end_layout
+
+\begin_layout Quote
+证: 
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+设
+\begin_inset Formula $X$
+\end_inset
+
+的Schauder基为
+\begin_inset Formula $\{e_{i}\}_{i=1}^{\infty}$
+\end_inset
+
+, 
+\begin_inset Formula $M=\bigcup\limits_{n=1}^{\infty}\{\sum\limits_{i=1}^{n}a_{i}e_{i},a_{i}\in\mathbb{Q}\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Quote
+\begin_inset Formula $\because\{\sum\limits_{i=1}^{n}a_{i}e_{i},a_{i}\in\mathbb{Q}\}$
+\end_inset
+
+是可列集;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore M$
+\end_inset
+
+是可列集, 进而
+\begin_inset Formula $M$
+\end_inset
+
+是可数集;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\forall x\in X,\exists!\{a_{n}\}_{n=1}^{\infty},s.t.:\sum\limits_{i=1}^{\infty}a_{i}e_{i}=x$
+\end_inset
+
+(
+\begin_inset Formula $X$
+\end_inset
+
+中Schauder基的定义);
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\bar{M}=X$
+\end_inset
+
+, 即
+\begin_inset Formula $M$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的稠密子集;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because X$
+\end_inset
+
+中有稠密子集
+\begin_inset Formula $M$
+\end_inset
+
+, 且
+\begin_inset Formula $M$
+\end_inset
+
+是可数集;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{X\texttt{可分}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+证毕.
+ 
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 作业: 20230425
@@ -3391,7 +4496,200 @@ Schauder基: 若赋范空间
 ;
 \end_layout
 
+\begin_layout Quote
+证:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $T_{1}\circ T_{2}$
+\end_inset
+
+是线性算子:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\forall x,y\in X,\forall\alpha\in K,(T_{1}\circ T_{2})(\alpha x+y)=T_{1}[T_{2}(\alpha x+y)]$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Quote
+\begin_inset Formula $\because T_{2}:X\to Y$
+\end_inset
+
+是线性算子;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore T_{2}(\alpha x+y)=\alpha T_{2}x+T_{2}y$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because T_{1}:Y\to Z$
+\end_inset
+
+是线性算子;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore T_{1}[T_{2}(\alpha x+y)]=\alpha T_{1}(T_{2}x)+T_{1}(T_{2}y)$
+\end_inset
+
+
+\begin_inset Formula $=\alpha(T_{1}\circ T_{2})x+(T_{1}\circ T_{2})y$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because(T_{1}\circ T_{2})(\alpha x+y)$
+\end_inset
+
+
+\begin_inset Formula $=\alpha(T_{1}\circ T_{2})x+(T_{1}\circ T_{2})y$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{T_{1}\circ T_{2}\texttt{是线性算子}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $T_{1}\circ T_{2}$
+\end_inset
+
+有界:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because T_{1},T_{2}$
+\end_inset
+
+有界;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\exists C_{1},C_{2}\ge0,s.t.:\forall x_{0}\in X,\forall y_{0}\in Y$
+\end_inset
+
+, 
+\begin_inset Formula $||T_{1}y_{0}||\le C_{1}||y_{0}||$
+\end_inset
+
+, 
+\begin_inset Formula $||T_{2}x_{0}||\le C_{2}||x_{0}||$
+\end_inset
+
+, 即
+\begin_inset Formula $||T_{1}||\le C_{1},||T_{2}||\le C_{2}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\forall x\in X,||(T_{1}\circ T_{2})x||=||T_{1}(T_{2}x)||$
+\end_inset
+
+
+\begin_inset Formula $\le||T_{1}||\cdot||T_{2}x||$
+\end_inset
+
+
+\begin_inset Formula $\le||T_{1}||\cdot||T_{2}||\cdot||x||$
+\end_inset
+
+
+\begin_inset Formula $\le C||x||$
+\end_inset
+
+, 
+\begin_inset Formula $C=C_{1}\cdot C_{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{T_{1}\circ T_{2}\texttt{是有界算子}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+综上, 
+\begin_inset Formula $T_{1}\circ T_{2}$
+\end_inset
+
+是有界线性算子;
+\end_layout
+
+\begin_layout Quote
+证明
+\begin_inset Formula $||T_{1}\circ T_{2}||\le||T_{1}||\cdot||T_{2}||$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because||T_{1}\circ T_{2}||=\sup\limits_{x\in X,x\neq\theta}\frac{||(T_{1}\circ T_{2})x||}{||x||}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{||T_{1}\circ T_{2}||\le||T_{1}||\cdot||T_{2}||}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证毕.
+ 
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
+设赋范空间
 \begin_inset Formula $(C[a,b],||\cdot||)$
 \end_inset
 
@@ -3414,6 +4712,231 @@ Schauder基: 若赋范空间
 ;
 \end_layout
 
+\begin_layout Quote
+证:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $f$
+\end_inset
+
+是线性泛函:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\forall x,y\in C[a,b],f(x)=x(t_{0})$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore f(\alpha x+y)=\alpha x+y$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because f(x)=x$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore f(\alpha x)=\alpha x=\alpha f(x)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because f(y)=y$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore f(\alpha x+y)=\alpha f(x)+f(y)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because f:C[a,b]\to\mathbb{R}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{f\texttt{是线性泛函}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $f$
+\end_inset
+
+是有界线性泛函:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because x\in C[a,b]$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\exists x'=\max\limits_{a\le t\le b}x(t)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because||fx||=||x||\le||x'||$
+\end_inset
+
+, 设
+\begin_inset Formula $||x'||=C||x||$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore||fx||\le C||x||$
+\end_inset
+
+, 即
+\begin_inset Formula $\underline{f\texttt{是有界泛函}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+综上, 
+\begin_inset Formula $f$
+\end_inset
+
+是有界线性泛函;
+\end_layout
+
+\begin_layout Quote
+证明
+\begin_inset Formula $||f||=1$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because||f||=\sup\frac{||fx||}{||x||}$
+\end_inset
+
+且
+\begin_inset Formula $f(x)=x(t_{0})$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore||f||=\sup\limits_{x\in C[a,b]}\frac{|x(t_{0})|}{\max\limits_{a\le t\le b}|x(t)|}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because|x(t_{0})|\le\max\limits_{a\le t\le b}|x(t)|$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore||f||\le1$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+设
+\begin_inset Formula $x_{0}(t)\equiv1$
+\end_inset
+
+, 则
+\begin_inset Formula $||f||=\sup\limits_{x\in C[a,b]}\frac{|x(t_{0})|}{\max\limits_{a\le t\le b}|x(t)|}$
+\end_inset
+
+
+\begin_inset Formula $\ge\frac{|x_{0}(t)|}{\max\limits _{a\le t\le b}|x_{0}(t)|}=1$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Quote
+\begin_inset Formula $\because1\le||f||\le1$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{||f||=1}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证毕.
+ 
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Section
 内积空间
@@ -4914,7 +6437,7 @@ Hahn-Banach定理: 设
 \end_inset
 
 , 则
-\begin_inset Formula $\cup{}_{i=1}^{\infty}E_{i}\in\Sigma$
+\begin_inset Formula $\bigcup\limits_{i=1}^{\infty}E_{i}\in\Sigma$
 \end_inset
 
 ;
@@ -4931,7 +6454,7 @@ Hahn-Banach定理: 设
 \end_inset
 
 , 则
-\begin_inset Formula $\cap_{i=0}^{\infty}E_{i}\in\Sigma$
+\begin_inset Formula $\bigcap\limits_{i=0}^{\infty}E_{i}\in\Sigma$
 \end_inset
 
 ;
@@ -5086,7 +6609,7 @@ Borel
 \end_inset
 
 的测度: 
-\begin_inset Formula $m(B)=\inf\{\sum\limits _{n=1}^{\infty}m(I_{n}),B\subset\cup_{n=1}^{\infty}\}$
+\begin_inset Formula $m(B)=\inf\{\sum\limits _{n=1}^{\infty}m(I_{n}),B\subset\bigcup\limits_{n=1}^{\infty}\{\mathbb{R}^{n}\texttt{上的开集}\}\}$
 \end_inset
 
 , 其中
@@ -5127,7 +6650,7 @@ Borel测度空间: 装配了测度
 \end_inset
 
 , 则
-\begin_inset Formula $m(\cup_{i=1}^{\infty}B_{i})=\sum\limits _{i=1}^{\infty}m(B_{i})$
+\begin_inset Formula $m(\bigcup\limits_{i=1}^{\infty}B_{i})=\sum\limits _{i=1}^{\infty}m(B_{i})$
 \end_inset
 
 ;
@@ -5177,7 +6700,7 @@ Lebesgue
 
 \begin_layout Enumerate
 次可加性: 
-\begin_inset Formula $m(\cup_{i=1}^{\infty}E_{i})\le\sum\limits _{i=1}^{\infty}(E_{i})$
+\begin_inset Formula $m(\bigcup\limits_{i=1}^{\infty}E_{i})\le\sum\limits _{i=1}^{\infty}(E_{i})$
 \end_inset
 
 ;
@@ -5189,7 +6712,7 @@ Lebesgue
 \end_inset
 
 , 则
-\begin_inset Formula $m(\cup_{i=1}^{\infty}E_{i})=m(\lim\limits _{i\to\infty}E_{i})=\lim\limits _{i\to\infty}m(E_{i})$
+\begin_inset Formula $m(\bigcup\limits_{i=1}^{\infty}E_{i})=m(\lim\limits _{i\to\infty}E_{i})=\lim\limits _{i\to\infty}m(E_{i})$
 \end_inset
 
 ;
@@ -5205,7 +6728,7 @@ Lebesgue
 \end_inset
 
 , 则
-\begin_inset Formula $m(\cap_{i=1}^{\infty}E_{i})=m(\lim\limits _{i\to\infty}E_{i})=\lim\limits _{i\to\infty}m(E_{i})$
+\begin_inset Formula $m(\bigcap\limits_{i=1}^{\infty}E_{i})=m(\lim\limits _{i\to\infty}E_{i})=\lim\limits _{i\to\infty}m(E_{i})$
 \end_inset
 
 ;
@@ -5330,7 +6853,7 @@ Lebesgue
 \begin_inset Formula $\lim\limits _{k\to+\infty}\int_{E}f_{k}(x)dx=\int_{E}\lim\limits _{k\to+\infty}f_{k}(x)dx=\int_{E}f(x)dx$
 \end_inset
 
-;
+;y
 \end_layout
 
 \begin_layout Enumerate

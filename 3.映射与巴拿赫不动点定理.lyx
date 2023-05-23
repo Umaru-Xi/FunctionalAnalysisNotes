@@ -82,7 +82,7 @@
 \end_layout
 
 \begin_layout Enumerate
-连续: 有度量空间
+连续: 设度量空间
 \begin_inset Formula $(X,d_{X})$
 \end_inset
 
@@ -165,7 +165,7 @@
 \begin_deeper
 \begin_layout Enumerate
 若开集
-\begin_inset Formula $V,\forall V\subset C:TV=\{y\in Y|\exists x\in V,Tx=y\}$
+\begin_inset Formula $V,\forall V\subset X:TV=\{y\in Y|\exists x\in V,Tx=y\}$
 \end_inset
 
 , 其像
@@ -225,7 +225,7 @@
 \end_inset
 
 , 直径
-\begin_inset Formula $d(M)=\sup\limits _{x\in M,y\in M}d(d,y)$
+\begin_inset Formula $d(M)=\sup\limits _{x\in M,y\in M}d(x,y)$
 \end_inset
 
 ;
@@ -502,7 +502,7 @@
 \end_inset
 
 中稠密(
-\begin_inset Formula $\bar{M}=\hat{X}$
+\begin_inset Formula $\bar{W}=\hat{X}$
 \end_inset
 
 )且
@@ -670,6 +670,160 @@ x(t_{0})=x_{0}
 中的闭集时才是连续的;
 \end_layout
 
+\begin_layout Quote
+证: 
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+证明充分性: 
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because M\subset Y$
+\end_inset
+
+是闭集;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore M^{c}\subset Y$
+\end_inset
+
+是开集;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because M\subset Y$
+\end_inset
+
+在映射
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+的逆象
+\begin_inset Formula $T^{-1}M$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的闭集;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore T^{-1}M^{c}=(T^{-1}M)^{c}\subset X$
+\end_inset
+
+是开集;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because T^{-1}M\subset X$
+\end_inset
+
+与
+\begin_inset Formula $M\subset Y$
+\end_inset
+
+都是开集;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{\texttt{映射}T\texttt{连续}};$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明必要性:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because$
+\end_inset
+
+映射
+\begin_inset Formula $T:X\to Y$
+\end_inset
+
+连续;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\forall W\subset Y$
+\end_inset
+
+是开集, 有
+\begin_inset Formula $T^{-1}W\subset X$
+\end_inset
+
+是开集;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because W\subset Y$
+\end_inset
+
+是开集;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore W^{c}\subset Y$
+\end_inset
+
+是闭集, 
+\begin_inset Formula $T^{-1}W^{c}=(T^{-1}W)^{c}\subset X$
+\end_inset
+
+也是闭集;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+设
+\begin_inset Formula $M=W^{c}\subset Y$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+有
+\begin_inset Formula $\underline{T^{-1}M\texttt{是闭集}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+综上, 原命题成立.
+ 证毕.
+ 
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 作业: 20230309
@@ -704,6 +858,157 @@ x(t_{0})=x_{0}
 ;
 \end_layout
 
+\begin_layout Quote
+证:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+的每一个子序列
+\begin_inset Formula $(x_{n_{k}})$
+\end_inset
+
+都收敛:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\{x_{n}\}$
+\end_inset
+
+在
+\begin_inset Formula $X$
+\end_inset
+
+中收敛于
+\begin_inset Formula $x$
+\end_inset
+
+, 设
+\begin_inset Formula $X$
+\end_inset
+
+中装配的度量是
+\begin_inset Formula $d$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\forall\varepsilon>0,\exists N=N(\varepsilon),s.t.:d(x_{n},x)<\varepsilon,(n\ge N)$
+\end_inset
+
+(或记为
+\begin_inset Formula $x_{n}\in B(x,\varepsilon)$
+\end_inset
+
+);
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\forall\{x_{n}'\}\subset\{x_{n}\}$
+\end_inset
+
+是
+\begin_inset Formula $\{x_{n}\}$
+\end_inset
+
+的子序列, 
+\begin_inset Formula $d(x_{n}',x)<\varepsilon,n\ge N$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{\{x_{n}'\}\texttt{收敛}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $(x_{n}')$
+\end_inset
+
+与
+\begin_inset Formula $(x_{n})$
+\end_inset
+
+收敛于同一个极限
+\begin_inset Formula $x$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because d(x_{n}',x)<\varepsilon,n\ge N$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\lim\limits_{n\to+\infty}d(x_{n}',x)=0$
+\end_inset
+
+, 即
+\begin_inset Formula $\{x_{n}'\}$
+\end_inset
+
+的极限是
+\begin_inset Formula $x$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\{x_{n}\}$
+\end_inset
+
+的极限是
+\begin_inset Formula $x$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{\{x_{n}'\}\texttt{与}\{x_{n}\}\texttt{有同样的极限}x}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证毕.
+ 
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \end_body
 \end_document

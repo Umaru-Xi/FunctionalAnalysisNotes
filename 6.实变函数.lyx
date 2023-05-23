@@ -139,7 +139,7 @@
 \end_inset
 
 , 则
-\begin_inset Formula $\cup{}_{i=1}^{\infty}E_{i}\in\Sigma$
+\begin_inset Formula $\bigcup\limits_{i=1}^{\infty}E_{i}\in\Sigma$
 \end_inset
 
 ;
@@ -156,7 +156,7 @@
 \end_inset
 
 , 则
-\begin_inset Formula $\cap_{i=0}^{\infty}E_{i}\in\Sigma$
+\begin_inset Formula $\bigcap\limits_{i=0}^{\infty}E_{i}\in\Sigma$
 \end_inset
 
 ;
@@ -311,7 +311,7 @@ Borel
 \end_inset
 
 的测度: 
-\begin_inset Formula $m(B)=\inf\{\sum\limits _{n=1}^{\infty}m(I_{n}),B\subset\cup_{n=1}^{\infty}\}$
+\begin_inset Formula $m(B)=\inf\{\sum\limits _{n=1}^{\infty}m(I_{n}),B\subset\bigcup\limits_{n=1}^{\infty}\{\mathbb{R}^{n}\texttt{上的开集}\}\}$
 \end_inset
 
 , 其中
@@ -352,7 +352,7 @@ Borel测度空间: 装配了测度
 \end_inset
 
 , 则
-\begin_inset Formula $m(\cup_{i=1}^{\infty}B_{i})=\sum\limits _{i=1}^{\infty}m(B_{i})$
+\begin_inset Formula $m(\bigcup\limits_{i=1}^{\infty}B_{i})=\sum\limits _{i=1}^{\infty}m(B_{i})$
 \end_inset
 
 ;
@@ -402,7 +402,7 @@ Lebesgue
 
 \begin_layout Enumerate
 次可加性: 
-\begin_inset Formula $m(\cup_{i=1}^{\infty}E_{i})\le\sum\limits _{i=1}^{\infty}(E_{i})$
+\begin_inset Formula $m(\bigcup\limits_{i=1}^{\infty}E_{i})\le\sum\limits _{i=1}^{\infty}(E_{i})$
 \end_inset
 
 ;
@@ -414,7 +414,7 @@ Lebesgue
 \end_inset
 
 , 则
-\begin_inset Formula $m(\cup_{i=1}^{\infty}E_{i})=m(\lim\limits _{i\to\infty}E_{i})=\lim\limits _{i\to\infty}m(E_{i})$
+\begin_inset Formula $m(\bigcup\limits_{i=1}^{\infty}E_{i})=m(\lim\limits _{i\to\infty}E_{i})=\lim\limits _{i\to\infty}m(E_{i})$
 \end_inset
 
 ;
@@ -430,7 +430,7 @@ Lebesgue
 \end_inset
 
 , 则
-\begin_inset Formula $m(\cap_{i=1}^{\infty}E_{i})=m(\lim\limits _{i\to\infty}E_{i})=\lim\limits _{i\to\infty}m(E_{i})$
+\begin_inset Formula $m(\bigcap\limits_{i=1}^{\infty}E_{i})=m(\lim\limits _{i\to\infty}E_{i})=\lim\limits _{i\to\infty}m(E_{i})$
 \end_inset
 
 ;
@@ -555,7 +555,7 @@ Lebesgue
 \begin_inset Formula $\lim\limits _{k\to+\infty}\int_{E}f_{k}(x)dx=\int_{E}\lim\limits _{k\to+\infty}f_{k}(x)dx=\int_{E}f(x)dx$
 \end_inset
 
-;
+;y
 \end_layout
 
 \begin_layout Enumerate

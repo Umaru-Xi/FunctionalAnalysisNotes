@@ -78,7 +78,7 @@
 \begin_body
 
 \begin_layout Section*
-赋范空间(作业: 20230317)与线性算子(作业20230425)
+赋范空间(作业: 20230317)与线性算子(作业: 20230425)
 \end_layout
 
 \begin_layout Enumerate
@@ -2147,7 +2147,7 @@ Schauder基: 若赋范空间
 , 按
 \begin_inset Formula $\begin{cases}
 (x_{1},x_{2})+(y_{1},y_{2})=(x_{1}+y_{1},x_{2}+y_{2})\\
-\alpha(x_{1},x_{2})=(\alpha x_{1},\alpha x_{2})
+\alpha(x_{1},x_{2})=(\alpha x_{1},\alpha x_{2}),\forall\alpha\in K
 \end{cases}$
 \end_inset
 
@@ -2158,6 +2158,519 @@ Schauder基: 若赋范空间
 成为一个矢量空间;
 \end_layout
 
+\begin_layout Quote
+证:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $X$
+\end_inset
+
+中存在零元:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because X_{1}X_{2}$
+\end_inset
+
+是线性空间;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\exists!\theta_{1}\in X_{1},\exists!\theta_{2}\in X_{2}$
+\end_inset
+
+分别是
+\begin_inset Formula $X_{1}$
+\end_inset
+
+与
+\begin_inset Formula $X_{2}$
+\end_inset
+
+中的零元;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\forall x_{1},y_{1}\in X_{1},\forall x_{2},y_{2}\in X_{2},$
+\end_inset
+
+
+\begin_inset Formula $(x_{1},x_{2})+(y_{1},y_{2})=(x_{1}+y_{1},x_{2}+y_{2})$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore(x_{1},x_{2})+(\theta_{1},\theta_{2})$
+\end_inset
+
+
+\begin_inset Formula $=(x_{1}+\theta_{1},x_{2}+\theta_{2})$
+\end_inset
+
+
+\begin_inset Formula $=(x_{1},x_{2})$
+\end_inset
+
+, 即
+\begin_inset Formula $\underline{X\texttt{中存在零元}\theta=(\theta_{1},\theta_{2})}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $X$
+\end_inset
+
+中的零元唯一:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+反设
+\begin_inset Formula $(\theta_{1}',\theta_{2}')$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的零元, 且
+\begin_inset Formula $(\theta_{1}',\theta_{2}')\neq(\theta_{1},\theta_{2})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Quote
+\begin_inset Formula $\because(\theta_{1},\theta_{2})$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的零元;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore(\theta_{1},\theta_{2})+(\theta_{1}',\theta_{2}')=(\theta_{1}',\theta_{2}')$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because(\theta_{1}',\theta_{2}')$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的零元;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore(\theta_{1},\theta_{2})+(\theta_{1}',\theta_{2}')=(\theta_{1},\theta_{2})$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because(\theta_{1},\theta_{2})=(\theta_{1}',\theta_{2}')$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{\texttt{矛盾,}X\texttt{中的零元唯一}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $X$
+\end_inset
+
+中的元素存在逆元:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because x_{1},x_{2}$
+\end_inset
+
+在
+\begin_inset Formula $X_{1},X_{2}$
+\end_inset
+
+中分别有唯一的逆元
+\begin_inset Formula $x_{1}',x_{2}'$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore x_{1}+x_{1}'=\theta_{1},x_{2}+x_{2}'=\theta_{2}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because(x_{1},x_{2})+(x_{1}',x_{2}')=(\theta_{1},\theta_{2})$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{X\text{中的任意元素}(x_{1},x_{2})\texttt{存在逆元}x'=(x_{1}',x_{2}')}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $X$
+\end_inset
+
+中元素的逆元唯一:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+反设
+\begin_inset Formula $\forall(x_{1},x_{2})\in X$
+\end_inset
+
+有逆元
+\begin_inset Formula $(x_{1}'',x_{2}'')$
+\end_inset
+
+, 且
+\begin_inset Formula $(x_{1}'',x_{2}'')\neq(x_{1}',x_{2}')$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Quote
+\begin_inset Formula $\because(x_{1}'',x_{2}'')$
+\end_inset
+
+是
+\begin_inset Formula $(x_{1},x_{2})$
+\end_inset
+
+的逆元;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore[(x_{1}'',x_{2}'')+(x_{1},x_{2})]+(x_{1}',x_{2}')$
+\end_inset
+
+
+\begin_inset Formula $=(\theta_{1},\theta_{2})+(x_{1}',x_{2}')$
+\end_inset
+
+
+\begin_inset Formula $=(x_{1}',x_{2}')$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because$
+\end_inset
+
+加法具有结合律;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore[(x_{1}'',x_{2}'')+(x_{1},x_{2})]+(x_{1}',x_{2}')$
+\end_inset
+
+
+\begin_inset Formula $=(x_{1}'',x_{2}'')+[(x_{1},x_{2})+(x_{1}'.x_{2}')]$
+\end_inset
+
+
+\begin_inset Formula $=(x_{1}'',x_{2}'')$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because(x_{1}',x_{2}')=(x_{1}'',x_{2}'')$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{\texttt{矛盾,}X\texttt{中元素的逆元唯一}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $\forall x=(x_{1},x_{2})\in X=X_{1}\times X_{2},0\cdot x=\theta$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because x_{1}\in X_{1},x_{2}\in X_{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore0\cdot x_{1}=\theta_{1},0\cdot x_{2}=\theta_{2}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\forall\alpha\in K,\alpha\cdot(x_{1},x_{2})=(\alpha\cdot x_{1},\alpha\cdot x_{2})$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{0\cdot x=0\cdot(x_{1},x_{2})=(\theta_{1},\theta_{2})=\theta}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $-1\cdot x=x'$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because-1\cdot x_{1}=x_{1}',-1\cdot x_{2}=x_{2}'$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{-1\cdot x=-1\cdot(x_{1},x_{2})=(x_{1}',x_{2}')=x'}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $\forall\alpha\in K,\alpha\cdot\theta=\theta$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\alpha\cdot\theta_{1}=\theta_{1},\alpha\cdot\theta_{2}=\theta_{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{\alpha\cdot\theta=\alpha\cdot(\theta_{1},\theta_{2})=(\theta_{1},\theta_{2})=\theta}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+综上, 
+\begin_inset Formula $X$
+\end_inset
+
+是线性空间.
+ 证毕.
+ 
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+证明若空间有邵德尔基, 则它是可分空间;
+\end_layout
+
+\begin_layout Quote
+证: 
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+设
+\begin_inset Formula $X$
+\end_inset
+
+的Schauder基为
+\begin_inset Formula $\{e_{i}\}_{i=1}^{\infty}$
+\end_inset
+
+, 
+\begin_inset Formula $M=\bigcup\limits_{n=1}^{\infty}\{\sum\limits_{i=1}^{n}a_{i}e_{i},a_{i}\in\mathbb{Q}\}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Quote
+\begin_inset Formula $\because\{\sum\limits_{i=1}^{n}a_{i}e_{i},a_{i}\in\mathbb{Q}\}$
+\end_inset
+
+是可列集;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore M$
+\end_inset
+
+是可列集, 进而
+\begin_inset Formula $M$
+\end_inset
+
+是可数集;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\forall x\in X,\exists!\{a_{n}\}_{n=1}^{\infty},s.t.:\sum\limits_{i=1}^{\infty}a_{i}e_{i}=x$
+\end_inset
+
+(
+\begin_inset Formula $X$
+\end_inset
+
+中Schauder基的定义);
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\bar{M}=X$
+\end_inset
+
+, 即
+\begin_inset Formula $M$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+中的稠密子集;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because X$
+\end_inset
+
+中有稠密子集
+\begin_inset Formula $M$
+\end_inset
+
+, 且
+\begin_inset Formula $M$
+\end_inset
+
+是可数集;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{X\texttt{可分}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+证毕.
+ 
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 作业: 20230425
@@ -2180,7 +2693,200 @@ Schauder基: 若赋范空间
 ;
 \end_layout
 
+\begin_layout Quote
+证:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $T_{1}\circ T_{2}$
+\end_inset
+
+是线性算子:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\forall x,y\in X,\forall\alpha\in K,(T_{1}\circ T_{2})(\alpha x+y)=T_{1}[T_{2}(\alpha x+y)]$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Quote
+\begin_inset Formula $\because T_{2}:X\to Y$
+\end_inset
+
+是线性算子;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore T_{2}(\alpha x+y)=\alpha T_{2}x+T_{2}y$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because T_{1}:Y\to Z$
+\end_inset
+
+是线性算子;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore T_{1}[T_{2}(\alpha x+y)]=\alpha T_{1}(T_{2}x)+T_{1}(T_{2}y)$
+\end_inset
+
+
+\begin_inset Formula $=\alpha(T_{1}\circ T_{2})x+(T_{1}\circ T_{2})y$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because(T_{1}\circ T_{2})(\alpha x+y)$
+\end_inset
+
+
+\begin_inset Formula $=\alpha(T_{1}\circ T_{2})x+(T_{1}\circ T_{2})y$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{T_{1}\circ T_{2}\texttt{是线性算子}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $T_{1}\circ T_{2}$
+\end_inset
+
+有界:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because T_{1},T_{2}$
+\end_inset
+
+有界;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\exists C_{1},C_{2}\ge0,s.t.:\forall x_{0}\in X,\forall y_{0}\in Y$
+\end_inset
+
+, 
+\begin_inset Formula $||T_{1}y_{0}||\le C_{1}||y_{0}||$
+\end_inset
+
+, 
+\begin_inset Formula $||T_{2}x_{0}||\le C_{2}||x_{0}||$
+\end_inset
+
+, 即
+\begin_inset Formula $||T_{1}||\le C_{1},||T_{2}||\le C_{2}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\forall x\in X,||(T_{1}\circ T_{2})x||=||T_{1}(T_{2}x)||$
+\end_inset
+
+
+\begin_inset Formula $\le||T_{1}||\cdot||T_{2}x||$
+\end_inset
+
+
+\begin_inset Formula $\le||T_{1}||\cdot||T_{2}||\cdot||x||$
+\end_inset
+
+
+\begin_inset Formula $\le C||x||$
+\end_inset
+
+, 
+\begin_inset Formula $C=C_{1}\cdot C_{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{T_{1}\circ T_{2}\texttt{是有界算子}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+综上, 
+\begin_inset Formula $T_{1}\circ T_{2}$
+\end_inset
+
+是有界线性算子;
+\end_layout
+
+\begin_layout Quote
+证明
+\begin_inset Formula $||T_{1}\circ T_{2}||\le||T_{1}||\cdot||T_{2}||$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because||T_{1}\circ T_{2}||=\sup\limits_{x\in X,x\neq\theta}\frac{||(T_{1}\circ T_{2})x||}{||x||}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{||T_{1}\circ T_{2}||\le||T_{1}||\cdot||T_{2}||}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证毕.
+ 
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
+设赋范空间
 \begin_inset Formula $(C[a,b],||\cdot||)$
 \end_inset
 
@@ -2203,6 +2909,231 @@ Schauder基: 若赋范空间
 ;
 \end_layout
 
+\begin_layout Quote
+证:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $f$
+\end_inset
+
+是线性泛函:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\forall x,y\in C[a,b],f(x)=x(t_{0})$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore f(\alpha x+y)=\alpha x+y$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because f(x)=x$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore f(\alpha x)=\alpha x=\alpha f(x)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because f(y)=y$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore f(\alpha x+y)=\alpha f(x)+f(y)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because f:C[a,b]\to\mathbb{R}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{f\texttt{是线性泛函}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $f$
+\end_inset
+
+是有界线性泛函:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because x\in C[a,b]$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\exists x'=\max\limits_{a\le t\le b}x(t)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because||fx||=||x||\le||x'||$
+\end_inset
+
+, 设
+\begin_inset Formula $||x'||=C||x||$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore||fx||\le C||x||$
+\end_inset
+
+, 即
+\begin_inset Formula $\underline{f\texttt{是有界泛函}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+综上, 
+\begin_inset Formula $f$
+\end_inset
+
+是有界线性泛函;
+\end_layout
+
+\begin_layout Quote
+证明
+\begin_inset Formula $||f||=1$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because||f||=\sup\frac{||fx||}{||x||}$
+\end_inset
+
+且
+\begin_inset Formula $f(x)=x(t_{0})$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore||f||=\sup\limits_{x\in C[a,b]}\frac{|x(t_{0})|}{\max\limits_{a\le t\le b}|x(t)|}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because|x(t_{0})|\le\max\limits_{a\le t\le b}|x(t)|$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore||f||\le1$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+设
+\begin_inset Formula $x_{0}(t)\equiv1$
+\end_inset
+
+, 则
+\begin_inset Formula $||f||=\sup\limits_{x\in C[a,b]}\frac{|x(t_{0})|}{\max\limits_{a\le t\le b}|x(t)|}$
+\end_inset
+
+
+\begin_inset Formula $\ge\frac{|x_{0}(t)|}{\max\limits _{a\le t\le b}|x_{0}(t)|}=1$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Quote
+\begin_inset Formula $\because1\le||f||\le1$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{||f||=1}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证毕.
+ 
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \end_body
 \end_document

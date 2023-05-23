@@ -99,6 +99,7 @@
 
 \begin_deeper
 \begin_layout Enumerate
+正定性: 
 \begin_inset Formula $\forall x,y\in X,d(x,y)\ge0$
 \end_inset
 
@@ -106,6 +107,7 @@
 \end_layout
 
 \begin_layout Enumerate
+对称性: 
 \begin_inset Formula $\forall x,y\in X$
 \end_inset
 
@@ -117,6 +119,7 @@
 \end_layout
 
 \begin_layout Enumerate
+三角不等式: 
 \begin_inset Formula $\forall x,y,z\in X,d(x,z)\le d(x,y)+d(y,z)$
 \end_inset
 
@@ -465,7 +468,7 @@
 \end_inset
 
 为可列集, 则
-\begin_inset Formula $A=\cup_{n=1}^{\infty}A_{n}$
+\begin_inset Formula $A=\bigcup\limits_{n=1}^{\infty}A_{n}$
 \end_inset
 
 为可列集;
@@ -571,7 +574,7 @@
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula $d_{max}(f,g)=\max_{a\le t\le b}|f(t)-g(t)|$
+\begin_inset Formula $d_{max}(f,g)=\max\limits_{a\le t\le b}|f(t)-g(t)|$
 \end_inset
 
 
@@ -596,7 +599,7 @@
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula $l^{\infty}=\{(x_{i})|i\in\mathbb{N},\sup_{i\in\mathbb{N}}|x_{i}|<\infty\}$
+\begin_inset Formula $l^{\infty}=\{(x_{i})|i\in\mathbb{N},\sup\limits_{i\in\mathbb{N}}|x_{i}|<\infty\}$
 \end_inset
 
 
@@ -633,6 +636,290 @@
 是有界的;
 \end_layout
 
+\begin_layout Quote
+证: 
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+证明
+\begin_inset Formula $\forall x,y\in X,\tilde{d}(x,y)$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+上的一个度量:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+正定性: 
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because d$
+\end_inset
+
+是
+\begin_inset Formula $X$
+\end_inset
+
+上的一个度量;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore d(x,y)\ge0$
+\end_inset
+
+且
+\begin_inset Formula $1+d(x,y)\ge1,\forall x,y\in X$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\tilde{d}(x,y)=\frac{d(x,y)}{1+d(x,y)}$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{\tilde{d}(x,y)\ge0}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+对称性:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\because d(x,y)=d(y,x),\forall x,y\in X$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{\tilde{d}(y,x)=\frac{d(y,x)}{1+d(y,x)}=\frac{d(x,y)}{1+d(x,y)}=\tilde{d}(x,y)}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+三角不等式:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+若
+\begin_inset Formula $\tilde{d}(x,y)$
+\end_inset
+
+满足
+\begin_inset Formula $\tilde{d}(x,z)\le\tilde{d}(x,y)+\tilde{d}(y,z),\forall x,y,z\in X$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+则必然有
+\begin_inset Formula $\tilde{d}(x,z)-\tilde{d}(y,z)\le\tilde{d}(x,y)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because d(x,z)\le d(x,y)+d(y,z)\Leftrightarrow d(x,z)-d(y,z)\le d(x,y)$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\tilde{d}(x,z)-\tilde{d}(y,z)=\frac{d(x,z)-d(y,z)}{1+d(x,z)+d(y,z)+d(x,z)d(y,z)}$
+\end_inset
+
+
+\begin_inset Formula $\le\frac{d(x,y)}{1+d(x,z)+d(y,z)+d(x,z)d(y,z)}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because d(x,z)+d(y,z)\ge d(x,y)$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\tilde{d}(x,z)-\tilde{d}(y,z)\le\frac{d(x,y)}{1+d(x,y)+d(x,z)d(y,z)}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because d(x,z)\ge0,d(y,z)\ge0\Rightarrow d(x,z)d(y,z)\ge0$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\tilde{d}(x,z)-\tilde{(y,z)}\le\frac{d(x,y)}{1+d(x,y)}=\tilde{d}(x,y)$
+\end_inset
+
+, 即
+\begin_inset Formula $\underline{\tilde{d}(x,z)\le\tilde{d}(x,y)+\tilde{d}(y,z)}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+综上, 
+\begin_inset Formula $\underline{\tilde{d}(x,y)\texttt{是X上的一个度量}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+证明在度量
+\begin_inset Formula $\tilde{d}(x,y)$
+\end_inset
+
+下
+\begin_inset Formula $X$
+\end_inset
+
+是有界的:
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+由
+\begin_inset Formula $\tilde{d}(x,y)=\frac{d(x,y)}{1+d(x,y)}$
+\end_inset
+
+且
+\begin_inset Formula $d(x,y)\ge0$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+定义
+\begin_inset Formula $\tilde{d}$
+\end_inset
+
+关于
+\begin_inset Formula $d$
+\end_inset
+
+的函数
+\begin_inset Formula $\tilde{d}(d)=\frac{d}{1+d},d\ge0$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\tilde{d}(d)=\frac{d}{1+d},d\ge0$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\tilde{d}'(d)=\frac{1}{(1+d)^{2}}\ge0$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because0<\tilde{d}'(d)\le1$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\tilde{d}_{max}(d)=\lim\limits _{d\to+\infty}\frac{d}{1+d}=1$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Formula $\because\max\limits _{d\ge0}\tilde{d}(d)=\sup\limits _{x\in X,y\in X}\tilde{d}(x,y)=1$
+\end_inset
+
+(在下一章中可引入
+\begin_inset Formula $\tilde{d}(X)=1<+\infty$
+\end_inset
+
+);
+\end_layout
+
+\begin_deeper
+\begin_layout Quote
+\begin_inset Formula $\therefore\underline{X\texttt{在度量\tilde{d}下有界}}$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Quote
+证毕.
+\begin_inset Formula $\blacksquare$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \end_body
 \end_document
